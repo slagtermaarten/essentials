@@ -1,0 +1,711 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     28298,        701]
+NotebookOptionsPosition[     27959,        684]
+NotebookOutlinePosition[     28339,        701]
+CellTagsIndexPosition[     28296,        698]
+WindowTitle->xSSA Palette
+WindowFrame->Palette*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"xSSAlite\"\>",
+          StripOnInput->False,
+          FontFamily->"Arial",
+          FontSize->24,
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 
+            Rational[2, 3]]]},
+        {
+         TagBox[GridBox[{
+            {
+             ButtonBox[
+              TagBox[
+               
+               TooltipBox["\<\"SSA[\[Placeholder],\[Placeholder],\
+\[Placeholder]...]\"\>",
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                  "\"SSA[reactions, \\!\\(\\*SubscriptBox[\\(t\\), \\(max\\)]\
+\\), IC, Parameters, MaxSteps]\"", TraditionalForm], TraditionalForm, 
+                  Editable -> True], FontFamily -> Times, StripOnInput -> 
+                 False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                 "SSA[reactions, \!\(\*SubscriptBox[\(t\), \(max\)]\), IC, \
+Parameters, MaxSteps]"], FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              ButtonData->RowBox[{"SSA", "[", 
+                 RowBox[{
+                   TagBox[
+                    FrameBox["\"Reaction List\""], "Placeholder"], ",", 
+                   TagBox[
+                    FrameBox[
+                    "\"\\!\\(\\*SubscriptBox[\\(t\\), \\(max\\)]\\)\""], 
+                    "Placeholder"], ",", 
+                   TagBox[
+                    FrameBox["\"IC Rules\""], "Placeholder"], ",", 
+                   TagBox[
+                    FrameBox["\"Parameter Rules\""], "Placeholder"], ",", 
+                   TagBox[
+                    FrameBox[
+                    "\"\\!\\(\\*SubscriptBox[\\(N\\), \\(max\\)]\\)\""], 
+                    "Placeholder"]}], "]"}]], 
+             ButtonBox[
+              TagBox[
+               TooltipBox["\<\"SSAPlot[\[Placeholder],\[Placeholder],...]\"\>",
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                  "\"SSAPlot[simulation, Any Plot Options]\"", 
+                   TraditionalForm], TraditionalForm, Editable -> True], 
+                 FontFamily -> Times, StripOnInput -> False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm["SSAPlot[simulation, Any Plot Options]"], 
+                 FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              ButtonData->RowBox[{"SSAPlot", "[", "\[Placeholder]", "]"}]]}
+           },
+           AutoDelete->False,
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+          "Grid"]},
+        {
+         TagBox[GridBox[{
+            {
+             ButtonBox[
+              TagBox[
+               
+               TooltipBox["\<\"\[SelectionPlaceholder]\[Rule]\[Placeholder]\"\
+\>",
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                   
+                   RowBox[{
+                    "\[SelectionPlaceholder]", "\[Rule]", "\[Placeholder]"}], 
+                   TraditionalForm], TraditionalForm, Editable -> True], 
+                 FontFamily -> Times, StripOnInput -> False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                  
+                  Defer[$CellContext`\[SelectionPlaceholder] -> 
+                   Placeholder[]]], FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              
+              ButtonData->
+               RowBox[{
+                "\[SelectionPlaceholder]", "\[Rule]", "\[Placeholder]"}]], 
+             ButtonBox[
+              TagBox[
+               
+               TooltipBox["\<\"\[SelectionPlaceholder]\[RightArrowLeftArrow]\
+\[Placeholder]\"\>",
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                   
+                   RowBox[{
+                    "\[SelectionPlaceholder]", "\[RightArrowLeftArrow]", 
+                    "\[Placeholder]"}], TraditionalForm], TraditionalForm, 
+                  Editable -> True], FontFamily -> Times, StripOnInput -> 
+                 False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                  Defer[
+                   RightArrowLeftArrow[$CellContext`\[SelectionPlaceholder], 
+                    Placeholder[]]]], FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              
+              ButtonData->
+               RowBox[{
+                "\[SelectionPlaceholder]", "\[RightArrowLeftArrow]", 
+                 "\[Placeholder]"}]], 
+             ButtonBox[
+              TagBox[
+               
+               TooltipBox["\<\"\[SelectionPlaceholder]\[Equilibrium]\
+\[Placeholder]\"\>",
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                   
+                   RowBox[{
+                    "\[SelectionPlaceholder]", "\[Equilibrium]", 
+                    "\[Placeholder]"}], TraditionalForm], TraditionalForm, 
+                  Editable -> True], FontFamily -> Times, StripOnInput -> 
+                 False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                  Defer[
+                   Equilibrium[$CellContext`\[SelectionPlaceholder], 
+                    Placeholder[]]]], FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              
+              ButtonData->
+               RowBox[{
+                "\[SelectionPlaceholder]", "\[Equilibrium]", 
+                 "\[Placeholder]"}]], 
+             ButtonBox[
+              TagBox[
+               
+               TooltipBox["\<\"\\!\\(\\*OverscriptBox[\\(\
+\[SelectionPlaceholder]\\), \\(\[Placeholder]\\)]\\)\"\>",
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                   OverscriptBox["\[SelectionPlaceholder]", "\[Placeholder]"],
+                    TraditionalForm], TraditionalForm, Editable -> True], 
+                 FontFamily -> Times, StripOnInput -> False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                  Overscript[$CellContext`\[SelectionPlaceholder], 
+                   Placeholder[]]], FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              
+              ButtonData->OverscriptBox[
+               "\[SelectionPlaceholder]", "\[Placeholder]"]], 
+             ButtonBox[
+              TagBox[
+               
+               TooltipBox["\<\"\\!\\(\\*UnderoverscriptBox[\\(\
+\[SelectionPlaceholder]\\), \\(\[Placeholder]\\), \
+\\(\[Placeholder]\\)]\\)\"\>",
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                   UnderoverscriptBox[
+                   "\[SelectionPlaceholder]", "\[Placeholder]", 
+                    "\[Placeholder]"], TraditionalForm], TraditionalForm, 
+                  Editable -> True], FontFamily -> Times, StripOnInput -> 
+                 False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                  Underoverscript[$CellContext`\[SelectionPlaceholder], 
+                   Placeholder[], 
+                   Placeholder[]]], FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              
+              ButtonData->UnderoverscriptBox[
+               "\[SelectionPlaceholder]", "\[Placeholder]", 
+                "\[Placeholder]"]], 
+             ButtonBox[
+              TagBox[
+               
+               TooltipBox["\<\"\[SelectionPlaceholder]\[Diamond]\[Placeholder]\
+\"\>",
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                  "\"Diamond[A,B] represents the compound of A and B\"", 
+                   TraditionalForm], TraditionalForm, Editable -> True], 
+                 FontFamily -> Times, StripOnInput -> False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                 "Diamond[A,B] represents the compound of A and B"], 
+                 FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              
+              ButtonData->
+               RowBox[{
+                "\[SelectionPlaceholder]", "\[Diamond]", "\[Placeholder]"}]]}
+           },
+           AutoDelete->False,
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+          "Grid"]}
+       },
+       AutoDelete->False,
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Mass Action Reactions\"\>",
+          StripOnInput->False,
+          FontFamily->"Arial",
+          FontSize->18,
+          FontWeight->Bold,
+          FontColor->RGBColor[0, 0, 
+            Rational[2, 3]]]},
+        {
+         TagBox[GridBox[{
+            {
+             ButtonBox[
+              TagBox[
+               TooltipBox[
+                RowBox[{"{", 
+                 RowBox[{
+                 "\[Placeholder]", "\[ShortRightArrow]", "\[Placeholder]"}], 
+                 "}"}],
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                  "\"A\[ShortRightArrow]B means A \\!\\(\\*OverscriptBox[\\(\
+\[ShortRightArrow]\\), \\(k\\)]\\) B\"", TraditionalForm], TraditionalForm, 
+                  Editable -> True], FontFamily -> Times, StripOnInput -> 
+                 False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                 "A\[ShortRightArrow]B means A \!\(\*OverscriptBox[\(\
+\[ShortRightArrow]\), \(k\)]\) B"], FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              ButtonData->RowBox[{"{", 
+                 RowBox[{
+                   RowBox[{
+                    TagBox[
+                    TagBox[
+                    FrameBox["Source"], "Placeholder"], DisplayForm], 
+                    "\[ShortRightArrow]", 
+                    TagBox[
+                    TagBox[
+                    FrameBox["Product"], "Placeholder"], DisplayForm]}], ",", 
+                   
+                   TagBox[
+                    TagBox[
+                    FrameBox["rate constant"], "Placeholder"], DisplayForm]}],
+                  "}"}]], 
+             ButtonBox[
+              TagBox[
+               TooltipBox[
+                RowBox[{"{", 
+                 OverscriptBox[
+                  RowBox[{
+                  "\[Placeholder]", "\[ShortRightArrow]", "\[Placeholder]"}], 
+                  "\[Placeholder]"], "}"}],
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                  "\"\\!\\(\\*OverscriptBox[\\(A \[ShortRightArrow] B\\), \
+\\(X\\)]\\) means A+X \\!\\(\\*OverscriptBox[\\(\[ShortRightArrow]\\), \
+\\(k\\)]\\) B+X\"", TraditionalForm], TraditionalForm, Editable -> True], 
+                 FontFamily -> Times, StripOnInput -> False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                 "\!\(\*OverscriptBox[\(A \[ShortRightArrow] B\), \(X\)]\) \
+means A+X \!\(\*OverscriptBox[\(\[ShortRightArrow]\), \(k\)]\) B+X"], 
+                 FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              ButtonData->RowBox[{"{", 
+                 RowBox[{
+                   OverscriptBox[
+                    RowBox[{
+                    TagBox[
+                    FrameBox["\"Substrate\""], "Placeholder"], "\[Rule]", 
+                    TagBox[
+                    FrameBox["\"Product\""], "Placeholder"]}], 
+                    TagBox[
+                    FrameBox["\"modifier\""], "Placeholder"]], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["rate constant"], "Placeholder"], DisplayForm]}],
+                  "}"}]], 
+             ButtonBox[
+              TagBox[
+               TooltipBox[
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                  "\[Placeholder]", "\[RightArrowLeftArrow]", 
+                   "\[Placeholder]"}], ",", "\[Placeholder]"}], "}"}],
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                  "\"A\[RightArrowLeftArrow]B means A \
+\\!\\(\\*UnderoverscriptBox[\\(\[RightArrowLeftArrow]\\), \
+SubscriptBox[\\(k\\), \\(r\\)], SubscriptBox[\\(k\\), \\(f\\)]]\\) B\"", 
+                   TraditionalForm], TraditionalForm, Editable -> True], 
+                 FontFamily -> Times, StripOnInput -> False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                 "A\[RightArrowLeftArrow]B means A \
+\!\(\*UnderoverscriptBox[\(\[RightArrowLeftArrow]\), SubscriptBox[\(k\), \
+\(r\)], SubscriptBox[\(k\), \(f\)]]\) B"], FontFamily -> Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              ButtonData->RowBox[{"{", 
+                 RowBox[{
+                   RowBox[{
+                    TagBox[
+                    TagBox[
+                    FrameBox["Species1"], "Placeholder"], DisplayForm], 
+                    "\[RightArrowLeftArrow]", 
+                    TagBox[
+                    TagBox[
+                    FrameBox["Species"], "Placeholder"], DisplayForm]}], ",", 
+                   
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(forward\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(reverse\)]\)"], 
+                    "Placeholder"], DisplayForm]}], "}"}]]},
+            {
+             ButtonBox[
+              TagBox[
+               TooltipBox[
+                RowBox[{"{", 
+                 RowBox[{
+                  OverscriptBox[
+                   RowBox[{
+                   "\[Placeholder]", "\[RightArrowLeftArrow]", 
+                    "\[Placeholder]"}], "\[Placeholder]"], ",", 
+                  "\[Placeholder]"}], "}"}],
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                  "\"\\!\\(\\*OverscriptBox[\\(A \[RightArrowLeftArrow] B\\), \
+\\(\[ScriptCapitalE]\\)]\\) means A+\[ScriptCapitalE] \
+\\!\\(\\*UnderoverscriptBox[\\(\[RightArrowLeftArrow]\\), \
+SubscriptBox[\\(k\\), \\(2\\)], SubscriptBox[\\(k\\), \\(1\\)]]\\) A\
+\[ScriptCapitalE] \\!\\(\\*UnderoverscriptBox[\\(\[RightArrowLeftArrow]\\), \
+SubscriptBox[\\(k\\), \\(4\\)], SubscriptBox[\\(k\\), \\(3\\)]]\\) B+\
+\[ScriptCapitalE]\"", TraditionalForm], TraditionalForm, Editable -> True], 
+                 FontFamily -> Times, StripOnInput -> False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                 "\!\(\*OverscriptBox[\(A \[RightArrowLeftArrow] B\), \(\
+\[ScriptCapitalE]\)]\) means A+\[ScriptCapitalE] \!\(\*UnderoverscriptBox[\(\
+\[RightArrowLeftArrow]\), SubscriptBox[\(k\), \(2\)], SubscriptBox[\(k\), \(1\
+\)]]\) A\[ScriptCapitalE] \
+\!\(\*UnderoverscriptBox[\(\[RightArrowLeftArrow]\), SubscriptBox[\(k\), \
+\(4\)], SubscriptBox[\(k\), \(3\)]]\) B+\[ScriptCapitalE]"], FontFamily -> 
+                 Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              ButtonData->RowBox[{"{", 
+                 RowBox[{
+                   OverscriptBox[
+                    RowBox[{
+                    TagBox[
+                    FrameBox["\"Substrate\""], "Placeholder"], 
+                    "\[RightArrowLeftArrow]", 
+                    TagBox[
+                    FrameBox["\"Product\""], "Placeholder"]}], 
+                    TagBox[
+                    FrameBox["\"Enzyme\""], "Placeholder"]], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(1\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(2\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(3\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(4\)]\)"], 
+                    "Placeholder"], DisplayForm]}], "}"}]], 
+             ButtonBox[
+              TagBox[
+               TooltipBox[
+                RowBox[{"{", 
+                 RowBox[{
+                  UnderoverscriptBox[
+                   RowBox[{
+                   "\[Placeholder]", "\[RightArrowLeftArrow]", 
+                    "\[Placeholder]"}], "\[Placeholder]", "\[Placeholder]"], 
+                  ",", "\[Placeholder]"}], "}"}],
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                  "\"\\!\\(\\*UnderoverscriptBox[\\(A \[RightArrowLeftArrow] \
+B\\), \\(\[ScriptCapitalF]\\), \\(\[ScriptCapitalE]\\)]\\) means A+\
+\[ScriptCapitalE] \\!\\(\\*UnderoverscriptBox[\\(\[RightArrowLeftArrow]\\), \
+SubscriptBox[\\(k\\), \\(2\\)], SubscriptBox[\\(k\\), \\(1\\)]]\\) A\
+\[ScriptCapitalE] \\!\\(\\*UnderoverscriptBox[\\(\[RightArrowLeftArrow]\\), \
+SubscriptBox[\\(k\\), \\(4\\)], SubscriptBox[\\(k\\), \\(3\\)]]\\) B+\
+\[ScriptCapitalE] and B+\[ScriptCapitalF] \\!\\(\\*UnderoverscriptBox[\\(\
+\[RightArrowLeftArrow]\\), SubscriptBox[\\(k\\), \\(6\\)], \
+SubscriptBox[\\(k\\), \\(5\\)]]\\) B\[ScriptCapitalF] \
+\\!\\(\\*UnderoverscriptBox[\\(\[RightArrowLeftArrow]\\), \
+SubscriptBox[\\(k\\), \\(8\\)], SubscriptBox[\\(k\\), \\(7\\)]]\\) B+\
+\[ScriptCapitalF]\"", TraditionalForm], TraditionalForm, Editable -> True], 
+                 FontFamily -> Times, StripOnInput -> False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                 "\!\(\*UnderoverscriptBox[\(A \[RightArrowLeftArrow] B\), \(\
+\[ScriptCapitalF]\), \(\[ScriptCapitalE]\)]\) means A+\[ScriptCapitalE] \
+\!\(\*UnderoverscriptBox[\(\[RightArrowLeftArrow]\), SubscriptBox[\(k\), \
+\(2\)], SubscriptBox[\(k\), \(1\)]]\) A\[ScriptCapitalE] \
+\!\(\*UnderoverscriptBox[\(\[RightArrowLeftArrow]\), SubscriptBox[\(k\), \
+\(4\)], SubscriptBox[\(k\), \(3\)]]\) B+\[ScriptCapitalE] and B+\
+\[ScriptCapitalF] \!\(\*UnderoverscriptBox[\(\[RightArrowLeftArrow]\), \
+SubscriptBox[\(k\), \(6\)], SubscriptBox[\(k\), \(5\)]]\) B\[ScriptCapitalF] \
+\!\(\*UnderoverscriptBox[\(\[RightArrowLeftArrow]\), SubscriptBox[\(k\), \
+\(8\)], SubscriptBox[\(k\), \(7\)]]\) B+\[ScriptCapitalF]"], FontFamily -> 
+                 Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              ButtonData->RowBox[{"{", 
+                 RowBox[{
+                   UnderoverscriptBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    FrameBox["Substrate"], "Placeholder"], DisplayForm], 
+                    "\[RightArrowLeftArrow]", 
+                    TagBox[
+                    TagBox[
+                    FrameBox["Product"], "Placeholder"], DisplayForm]}], 
+                    TagBox[
+                    TagBox[
+                    FrameBox["Reverse Enzyme"], "Placeholder"], DisplayForm], 
+                    
+                    TagBox[
+                    TagBox[
+                    FrameBox["Forward Enzyme"], "Placeholder"], DisplayForm]],
+                    ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(1\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(2\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(3\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(4\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(5\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(6\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(7\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(8\)]\)"], 
+                    "Placeholder"], DisplayForm]}], "}"}]], 
+             ButtonBox[
+              TagBox[
+               TooltipBox[
+                RowBox[{"{", 
+                 RowBox[{
+                  OverscriptBox[
+                   RowBox[{
+                   "\[Placeholder]", "\[Equilibrium]", "\[Placeholder]"}], 
+                   "\[Placeholder]"], ",", "\[Placeholder]"}], "}"}],
+                StyleBox[
+                 TagBox[
+                  FormBox[
+                  "\"\\!\\(\\*OverscriptBox[\\(A \[Equilibrium] B\\), \\(\
+\[ScriptCapitalE]\\)]\\) means A+\[ScriptCapitalE] \
+\\!\\(\\*UnderoverscriptBox[\\(\[RightArrowLeftArrow]\\), \
+SubscriptBox[\\(k\\), \\(2\\)], SubscriptBox[\\(k\\), \\(1\\)]]\\) A\
+\[ScriptCapitalE] \\!\\(\\*UnderoverscriptBox[\\(\[RightArrowLeftArrow]\\), \
+SubscriptBox[\\(k\\), \\(4\\)], SubscriptBox[\\(k\\), \\(3\\)]]\\) B\
+\[ScriptCapitalE] \\!\\(\\*UnderoverscriptBox[\\(\[RightArrowLeftArrow]\\), \
+SubscriptBox[\\(k\\), \\(6\\)], SubscriptBox[\\(k\\), \\(5\\)]]\\) B+\
+\[ScriptCapitalE]\"", TraditionalForm], TraditionalForm, Editable -> True], 
+                 FontFamily -> Times, StripOnInput -> False]],
+               Annotation[#, 
+                Style[
+                 TraditionalForm[
+                 "\!\(\*OverscriptBox[\(A \[Equilibrium] B\), \(\
+\[ScriptCapitalE]\)]\) means A+\[ScriptCapitalE] \!\(\*UnderoverscriptBox[\(\
+\[RightArrowLeftArrow]\), SubscriptBox[\(k\), \(2\)], SubscriptBox[\(k\), \(1\
+\)]]\) A\[ScriptCapitalE] \
+\!\(\*UnderoverscriptBox[\(\[RightArrowLeftArrow]\), SubscriptBox[\(k\), \
+\(4\)], SubscriptBox[\(k\), \(3\)]]\) B\[ScriptCapitalE] \
+\!\(\*UnderoverscriptBox[\(\[RightArrowLeftArrow]\), SubscriptBox[\(k\), \
+\(6\)], SubscriptBox[\(k\), \(5\)]]\) B+\[ScriptCapitalE]"], FontFamily -> 
+                 Times], "Tooltip"]& ],
+              Appearance->"DialogBox",
+              BaseStyle->"Paste",
+              ButtonData->RowBox[{"{", 
+                 RowBox[{
+                   OverscriptBox[
+                    RowBox[{
+                    TagBox[
+                    FrameBox["\"Substrate\""], "Placeholder"], 
+                    "\[Equilibrium]", 
+                    TagBox[
+                    FrameBox["\"Product\""], "Placeholder"]}], 
+                    TagBox[
+                    FrameBox["\"Enzyme\""], "Placeholder"]], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(1\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(2\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(3\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(4\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(5\)]\)"], 
+                    "Placeholder"], DisplayForm], ",", 
+                   TagBox[
+                    TagBox[
+                    FrameBox["\!\(\*SubscriptBox[\(k\), \(6\)]\)"], 
+                    "Placeholder"], DisplayForm]}], "}"}]]}
+           },
+           AutoDelete->False,
+           GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+          "Grid"]}
+       },
+       AutoDelete->False,
+       GridBoxFrame->{"Columns" -> False, "Rows" -> False},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]},
+    {
+     StyleBox["\<\"Mouse over any button for the equivalent\"\>",
+      StripOnInput->False,
+      FontFamily->Times,
+      FontSize->10,
+      FontSlant->Italic]},
+    {
+     StyleBox["\<\"mass action kinetics.\"\>",
+      StripOnInput->False,
+      FontFamily->Times,
+      FontSize->10,
+      FontSlant->Italic]},
+    {
+     StyleBox["\<\"xSSAlite is part of the Cellerator System.\"\>",
+      StripOnInput->False,
+      FontFamily->Times,
+      FontSize->10,
+      FontSlant->Italic]},
+    {
+     TagBox[
+      ButtonBox[
+       PaneSelectorBox[{False->
+        StyleBox["\<\"\[Copyright]2009-11. CC-GNU LGPL 2.1 Applies\"\>",
+         StripOnInput->False,
+         FontFamily->"Times",
+         FontSize->10,
+         FontSlant->Italic], True->
+        StyleBox[
+         StyleBox["\<\"\[Copyright]2009-11. CC-GNU LGPL 2.1 Applies\"\>",
+          StripOnInput->False,
+          FontFamily->"Times",
+          FontSize->10,
+          FontSlant->Italic], "HyperlinkActive"]}, Dynamic[
+         CurrentValue["MouseOver"]],
+        BaseStyle->{"Hyperlink"},
+        BaselinePosition->Baseline,
+        FrameMargins->0,
+        ImageSize->Automatic],
+       BaseStyle->"Hyperlink",
+       ButtonData->{
+         URL["http://creativecommons.org/license/cc-lgpl"], None},
+       ButtonNote->"http://creativecommons.org/license/cc-lgpl"],
+      Annotation[#, "http://creativecommons.org/license/cc-lgpl", 
+       "Hyperlink"]& ]}
+   },
+   AutoDelete->False,
+   GridBoxBackground->{"Columns" -> {{
+        RGBColor[0.87, 0.94, 1]}}},
+   GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]],
+ CellMargins->{{0, 0}, {0, 0}},
+ CellBracketOptions->{"Color"->RGBColor[0.269993, 0.308507, 0.6]},
+ CellHorizontalScrolling->True,
+ PageBreakAbove->True,
+ PageBreakWithin->False,
+ ShowAutoStyles->True,
+ LineSpacing->{1.25, 0},
+ AutoItalicWords->{},
+ ScriptMinSize->9,
+ ShowStringCharacters->False,
+ FontFamily:>CurrentValue["PanelFontFamily"],
+ FontSize:>CurrentValue["PanelFontSize"]]
+},
+WindowSize->All,
+WindowMargins->{{241, Automatic}, {Automatic, 404}},
+WindowElements->{},
+WindowTitle->"xSSA Palette",
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (November 7, 2010)",
+StyleDefinitions->"Palette.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[584, 21, 27371, 661, 294, InheritFromParent,
+ PageBreakAbove->True,
+ PageBreakWithin->False]
+}
+]
+*)
+
+(* End of internal cache information *)
+

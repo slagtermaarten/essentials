@@ -1,0 +1,7 @@
+[user]
+	name = Maarten Slagter
+	email = slagter.maarten@gmail.com
+[merge]
+	tool = vimdiff
+[core]
+	editor = vim
