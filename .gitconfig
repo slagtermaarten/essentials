@@ -5,3 +5,5 @@
 	tool = vimdiff
 [core]
 	editor = vim
+[alias]
+    ac = !git add -A && git commit
