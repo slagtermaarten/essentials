@@ -14,10 +14,7 @@ EvaluatorNames->{
   "galjas" -> {
    "RemoteMachine" -> True, "TranslateReturns" -> True, "AutoStartOnLaunch" -> 
     False, "HostName" -> "galjas.few.vu.nl", "RemoteLogin" -> "msr313"}},
-NotebooksMenu->{"ssa_remix.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "iGEM_Dropbox", "mathematicafiles"}, "ssa_remix.nb", CharacterEncoding -> 
-     "UTF-8"], True, False, True}, "test.nb" -> {
+NotebooksMenu->{"test.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
       "iGEM_Dropbox", "mathematicafiles"}, "test.nb", CharacterEncoding -> 
      "UTF-8"], True, False, True}, "prognl.nb" -> {
@@ -38,6 +35,8 @@ NotebooksMenu->{"ssa_remix.nb" -> {
   "lacoperonfromsbml.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Downloads", 
       "xSSAlite-12.01.1-17Jan2012-1301"}, "lacoperonfromsbml.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, "RawMoment.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "tmp"}, "RawMoment.nb", 
      CharacterEncoding -> "UTF-8"], True, False, True}},
 PreferencesSettings->{"Page"->"Advanced"},
 FindSettings->{"FindBoxes"->"toSpecies",
@@ -68,8 +67,8 @@ MessageOptions->{"AllowDisablingWarnings"->True,
 "WarningAction"->"Beep"},
 PrivateFrontEndOptions->{"DialogSettings"->{
  "WelcomeScreen" -> {
-   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 6, 
-    "CurrentSlideNumber" -> 6}, 
+   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 7, 
+    "CurrentSlideNumber" -> 7}, 
   "DrawingTools" -> {
    WindowMargins -> {{Automatic, 7}, {Automatic, 0}}, "ToolsOpener" -> True, 
     "OperationsOpener" -> True, "FillOpener" -> True, "StrokeOpener" -> False,

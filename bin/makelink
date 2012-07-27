@@ -46,12 +46,8 @@ rm .fonts
 ln -s $HOME/essentials/.fonts
 
 # rm /etc/matplotlibrc
-cd $HOME
-mkdir .matplotlib
-cd $HOME/.matplotlib
-ln -s $HOME/essentials/matplotlibrc .
+ln -s $HOME/essentials/.matplotlib/matplotlibrc .
 
-cd /bin
 # rm R
 # rm Rscript
 
