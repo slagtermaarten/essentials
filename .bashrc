@@ -1,6 +1,6 @@
 set -o vi
 export CDPATH=~/Dropbox:~
-PATH=$HOME/bin:$HOME/Dropbox/bin:$PATH
+PATH=$HOME/essentials/bin:$PATH
 export PATH
 
 # ~/.bashrc: executed by bash(1) for non-login shells.

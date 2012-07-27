@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# find `pwd` -name \*.pdf -type f
+find `pwd` -name \*.pdf -type f | xargs -r evince &

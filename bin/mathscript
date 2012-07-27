@@ -1,0 +1,1 @@
+cat "`pwd`/$1.m" | math | grep -v "In\["

@@ -1,0 +1,66 @@
+#!/bin/sh
+
+cd $HOME
+
+mkdir texmf
+mkdir texmf/tex
+cd $HOME/texmf/tex
+ln -s ~/essentials/latex .
+
+cd $HOME
+
+rm .bashrc
+ln -s $HOME/essentials/.bashrc .
+
+rm .bash_aliases
+ln -s $HOME/essentials/.bash_aliases .
+
+rm .bash_profile
+ln -s $HOME/essentials/.bash_profile .
+
+rm .Xmodmap
+ln -s $HOME/essentials/.Xmodmap .
+
+rm .screenrc
+ln -s $HOME/essentials/.screenrc .
+
+rm .vim
+ln -s $HOME/essentials/.vim .
+
+rm .vimrc
+ln -s $HOME/essentials/.vimrc .
+
+rm .gitconfig
+ln -s $HOME/essentials/.gitconfig .
+
+rm .gitignore
+ln -s $HOME/essentials/.gitignore .
+
+rm .Rprofile
+ln -s $HOME/essentials/.Rprofile .
+
+rm .Mathematica
+ln -s $HOME/essentials/.Mathematica
+
+rm .fonts
+ln -s $HOME/essentials/.fonts
+
+# rm /etc/matplotlibrc
+cd $HOME
+mkdir .matplotlib
+cd $HOME/.matplotlib
+ln -s $HOME/essentials/matplotlibrc .
+
+cd /bin
+# rm R
+# rm Rscript
+
+cd $HOME
+
+# ln -s ~/R-2.15.1/bin/Rscript ~/bin
+# ln -s ~/R-2.15.1/bin/R ~/bin
+
+cd -
+echo "Complete"
+
+# getnonfreefonts-sys --all

@@ -1,0 +1,1 @@
+find . -name "*conflicted*" -print0 | xargs -0 rm

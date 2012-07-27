@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd $HOME/Dropbox/.dropbox.cache
+rm -r *
+rm -r ~/.cache
+cd - 

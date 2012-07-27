@@ -1,0 +1,2 @@
+#!/bin/sh
+find . -mtime 10 -print0 | xargs -0 mv $1

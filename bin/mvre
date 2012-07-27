@@ -1,0 +1,4 @@
+#!/bin/sh
+# find . -mtime -1 -print0
+# | xargs -0 mv $1
+find . -name "*.*" -mtime -1 -exec mv {} $1 \;

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd ~/.dropbox
+rm *dbx*
+cd -
+
