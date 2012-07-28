@@ -2,12 +2,8 @@
 
 cd $HOME
 
-mkdir texmf
-mkdir texmf/tex
-cd $HOME/texmf/tex
-ln -s ~/essentials/latex .
-
-cd $HOME
+rm -r texmf
+ln -s ~/essentials/texmf .
 
 rm .bashrc
 ln -s $HOME/essentials/.bashrc .
