@@ -45,16 +45,17 @@ ln -s $HOME/essentials/.Mathematica
 rm .fonts
 ln -s $HOME/essentials/.fonts
 
-# rm /etc/matplotlibrc
+mkdir .matplotlib
+cd .matplotlib
+rm matplotlibrc
 ln -s $HOME/essentials/.matplotlib/matplotlibrc .
+cd -
 
-# rm R
-# rm Rscript
-
-cd $HOME
-
-# ln -s ~/R-2.15.1/bin/Rscript ~/bin
-# ln -s ~/R-2.15.1/bin/R ~/bin
+cd $HOME/essentials/bin
+rm R
+rm Rscript
+# ln -s ~/R-2.15.1/bin/Rscript .
+ln -s ~/R-2.15.1/bin/R .
 
 cd -
 echo "Complete"

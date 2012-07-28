@@ -8,3 +8,5 @@ fi
 
 EDITOR=vim
 export EDITOR
+
+source ~/venv/base/bin/activate
