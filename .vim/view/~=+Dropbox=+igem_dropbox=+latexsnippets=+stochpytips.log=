@@ -1,5 +1,14 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
+nnoremap <buffer> <silent>  :call GotoErrorLocation("stochpytips.log")
+nnoremap <buffer> <silent> j j:call UpdatePreviewWindow("stochpytips.log")
+nnoremap <buffer> <silent> k k:call UpdatePreviewWindow("stochpytips.log")
+let s:cpo_save=&cpo
+set cpo&vim
+nnoremap <buffer> <silent> <Up> <Up>:call UpdatePreviewWindow("stochpytips.log")
+nnoremap <buffer> <silent> <Down> <Down>:call UpdatePreviewWindow("stochpytips.log")
+let &cpo=s:cpo_save
+unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -98,15 +107,15 @@ setlocal thesaurus=
 setlocal noundofile
 setlocal nowinfixheight
 setlocal nowinfixwidth
-setlocal wrap
+setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 50 - ((17 * winheight(0) + 11) / 23)
+let s:l = 833 - ((20 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-50
-normal! 01l
+833
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

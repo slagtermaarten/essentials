@@ -183,5 +183,7 @@ let g:ipy_completefunc = 'local'
 
 let g:surround_{char2nr('_')} = "_{\r}"
 let g:surround_{char2nr('t')} = "\\text{\r}"
+let g:surround_{char2nr('i')} = "\\emph{\r}"
+let g:surround_{char2nr('b')} = "\\textbf{\r}"
 
 

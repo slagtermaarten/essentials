@@ -81,7 +81,7 @@ setlocal includeexpr=substitute(v:fname,\ '^.\\{-}{\\|}.*',\ '',\ 'g')
 setlocal indentexpr=GetTeXIndent()
 setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,},=\\item,=\\bibitem
 setlocal noinfercase
-setlocal iskeyword=48-57,a-z,A-Z,192-255
+setlocal iskeyword=48-57,a-z,A-Z,192-255,@-@
 setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
@@ -107,7 +107,7 @@ setlocal shiftwidth=4
 setlocal noshortname
 setlocal nosmartindent
 setlocal softtabstop=4
-setlocal spell
+setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
@@ -128,12 +128,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 41 - ((0 * winheight(0) + 19) / 38)
+let s:l = 21 - ((10 * winheight(0) + 5) / 11)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-41
-normal! 080l
+21
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

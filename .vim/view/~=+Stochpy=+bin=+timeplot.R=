@@ -1,32 +1,32 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
-nnoremap <buffer> <silent> \rf :call StartR("R")
-nnoremap <buffer> <silent> \rv :call StartR("vanilla")
-nnoremap <buffer> <silent> \rc :call StartR("custom")
-nnoremap <buffer> <silent> \rq :call RQuit('nosave')
-nnoremap <buffer> <silent> \rw :call RQuit('save')
-nnoremap <buffer> <silent> \xx :call RComment("normal")
-nnoremap <buffer> <silent> \; :call MovePosRCodeComment("normal")
-nnoremap <buffer> <silent> \ff :call SendFunctionToR("silent", "stay")
-nnoremap <buffer> <silent> \fe :call SendFunctionToR("echo", "stay")
-nnoremap <buffer> <silent> \fd :call SendFunctionToR("silent", "down")
-nnoremap <buffer> <silent> \fa :call SendFunctionToR("echo", "down")
-nnoremap <buffer> <silent> \rl :call SendCmdToR("ls()")
-nnoremap <buffer> <silent> \rr :call RClearConsole()
-nnoremap <buffer> <silent> \rm :call RClearAll()
-nnoremap <buffer> <silent> \rp :call RAction("print")
-nnoremap <buffer> <silent> \rn :call RAction("names")
-nnoremap <buffer> <silent> \rt :call RAction("str")
-nnoremap <buffer> <silent> \ra :call RAction("args")
-nnoremap <buffer> <silent> \re :call RAction("example")
-nnoremap <buffer> <silent> \rh :call RAction("help")
-nnoremap <buffer> <silent> \rs :call RAction("summary")
-nnoremap <buffer> <silent> \rg :call RAction("plot")
-nnoremap <buffer> <silent> \rb :call RAction("plotsumm")
-nnoremap <buffer> <silent> \ro :call RObjBrowser()
-nnoremap <buffer> <silent> \r= :call RBrowserOpenCloseLists(1)
-nnoremap <buffer> <silent> \r- :call RBrowserOpenCloseLists(0)
 nnoremap <buffer> <silent> \rd :call RSetWD()
+nnoremap <buffer> <silent> \r- :call RBrowserOpenCloseLists(0)
+nnoremap <buffer> <silent> \r= :call RBrowserOpenCloseLists(1)
+nnoremap <buffer> <silent> \ro :call RObjBrowser()
+nnoremap <buffer> <silent> \rb :call RAction("plotsumm")
+nnoremap <buffer> <silent> \rg :call RAction("plot")
+nnoremap <buffer> <silent> \rs :call RAction("summary")
+nnoremap <buffer> <silent> \rh :call RAction("help")
+nnoremap <buffer> <silent> \re :call RAction("example")
+nnoremap <buffer> <silent> \ra :call RAction("args")
+nnoremap <buffer> <silent> \rt :call RAction("str")
+nnoremap <buffer> <silent> \rn :call RAction("names")
+nnoremap <buffer> <silent> \rp :call RAction("print")
+nnoremap <buffer> <silent> \rm :call RClearAll()
+nnoremap <buffer> <silent> \rr :call RClearConsole()
+nnoremap <buffer> <silent> \rl :call SendCmdToR("ls()")
+nnoremap <buffer> <silent> \fa :call SendFunctionToR("echo", "down")
+nnoremap <buffer> <silent> \fd :call SendFunctionToR("silent", "down")
+nnoremap <buffer> <silent> \fe :call SendFunctionToR("echo", "stay")
+nnoremap <buffer> <silent> \ff :call SendFunctionToR("silent", "stay")
+nnoremap <buffer> <silent> \; :call MovePosRCodeComment("normal")
+nnoremap <buffer> <silent> \xx :call RComment("normal")
+nnoremap <buffer> <silent> \rw :call RQuit('save')
+nnoremap <buffer> <silent> \rq :call RQuit('nosave')
+nnoremap <buffer> <silent> \rc :call StartR("custom")
+nnoremap <buffer> <silent> \rv :call StartR("vanilla")
+nnoremap <buffer> <silent> \rf :call StartR("R")
 vnoremap <buffer> <silent> \rd :call RSetWD()
 onoremap <buffer> <silent> \rd :call RSetWD()
 vnoremap <buffer> <silent> \r- :call RBrowserOpenCloseLists(0)
@@ -242,13 +242,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 9 - ((1 * winheight(0) + 11) / 23)
+let s:l = 5 - ((4 * winheight(0) + 11) / 23)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-9
-normal! 0
-lcd ~/Stochpy/scripts
+5
+normal! 020l
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
