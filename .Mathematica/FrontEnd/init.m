@@ -1,6 +1,5 @@
 SetOptions[$FrontEnd, 
-NotebookBrowseDirectory->"/home/maarten/Downloads/xSSAlite-12.01.1-17Jan2012-\
-1301",
+NotebookBrowseDirectory->"/home/maarten/Dropbox/igem_dropbox/mathematicafiles",
 Current2DTool->"Select",
 Default2DTool->"Select",
 IsPersistent2DTool->False,
@@ -14,19 +13,7 @@ EvaluatorNames->{
   "galjas" -> {
    "RemoteMachine" -> True, "TranslateReturns" -> True, "AutoStartOnLaunch" -> 
     False, "HostName" -> "galjas.few.vu.nl", "RemoteLogin" -> "msr313"}},
-NotebooksMenu->{"test.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "iGEM_Dropbox", "mathematicafiles"}, "test.nb", CharacterEncoding -> 
-     "UTF-8"], True, False, True}, "prognl.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "iGEM_Dropbox", "mathematicafiles"}, "prognl.nb", CharacterEncoding -> 
-     "UTF-8"], True, False, True}, "lac_stochastic.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten"}, 
-     "lac_stochastic.nb", CharacterEncoding -> "UTF-8"], True, False, True}, 
-  "lac_stochastic_gibberish.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "iGEM_Dropbox", "mathematicafiles"}, "lac_stochastic_gibberish.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, "lac_stochastic.nb" -> {
+NotebooksMenu->{"lac_stochastic.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
       "iGEM_Dropbox", "mathematicafiles"}, "lac_stochastic.nb", 
      CharacterEncoding -> "UTF-8"], True, False, True}, "Examples.nb" -> {
@@ -37,7 +24,21 @@ NotebooksMenu->{"test.nb" -> {
       "xSSAlite-12.01.1-17Jan2012-1301"}, "lacoperonfromsbml.nb", 
      CharacterEncoding -> "UTF-8"], True, False, True}, "RawMoment.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "tmp"}, "RawMoment.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}},
+     CharacterEncoding -> "UTF-8"], True, False, True}, "rateconstants.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "igem_dropbox", "mathematicafiles"}, "rateconstants.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, 
+  "DeterministicVersusStochasticChemicalKinetics-source.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "igem_dropbox", "mathematicafiles"}, 
+     "DeterministicVersusStochasticChemicalKinetics-source.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, "mono-mono.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "igem_dropbox", "mathematicafiles"}, "mono-mono.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, "SSAMean-example.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", ".cache", 
+      ".fr-AjOAvq"}, "SSAMean-example.nb", CharacterEncoding -> "UTF-8"], 
+    True, False, True}},
 PreferencesSettings->{"Page"->"Advanced"},
 FindSettings->{"FindBoxes"->"toSpecies",
 "FindHistory":>{
@@ -50,7 +51,11 @@ FindSettings->{"FindBoxes"->"toSpecies",
 "WholeWord"->True,
 "WindowMargins"->{{Automatic, 239}, {167, Automatic}},
 "Wraparound"->True},
-DebuggerSettings->{"ShowStack"->True},
+DebuggerSettings->{"DebuggerEnabled"->True,
+"ShowStack"->True,
+"StackWindowMargins"->{{Automatic, 11}, {3, Automatic}},
+"StackWindowSize"->{574, 251},
+"ToolsWindowMargins"->{{Automatic, 84}, {Automatic, 35}}},
 MessageOptions->{"AllowDisablingWarnings"->True,
 "CompatibilityToolWarning"->True,
 "ConsoleMessageAction"->"PrintToConsole",
@@ -67,8 +72,8 @@ MessageOptions->{"AllowDisablingWarnings"->True,
 "WarningAction"->"Beep"},
 PrivateFrontEndOptions->{"DialogSettings"->{
  "WelcomeScreen" -> {
-   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 7, 
-    "CurrentSlideNumber" -> 7}, 
+   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 4, 
+    "CurrentSlideNumber" -> 4}, 
   "DrawingTools" -> {
    WindowMargins -> {{Automatic, 7}, {Automatic, 0}}, "ToolsOpener" -> True, 
     "OperationsOpener" -> True, "FillOpener" -> True, "StrokeOpener" -> False,
@@ -193,10 +198,15 @@ PrivateFrontEndOptions->{"DialogSettings"->{
       "Numbers" -> "Formatting"}}}},
 PrintAction->"PrintToNotebook",
 NewPrimitiveStyle->{
- TextAlignment -> Left, FrontFaceColor -> GrayLevel[0], FrontFaceOpacity -> 1,
-   DrawFrontFaces -> True, FontFamily -> "Courier", FontSize -> 12, 
-  FontWeight -> "Plain", FontSlant -> "Plain", FontTracking -> "Plain", 
-  FontVariations -> {
+ TextAlignment -> Left, Dashing -> None, CapForm -> "Square", 
+  JoinForm -> {"Miter", 3.25}, LineColor -> Hue[0.67, 0.6, 0.6], LineOpacity -> 
+  1, EdgeColor -> Hue[0.6699931334401464, 0.6, 0.6], EdgeOpacity -> 1., 
+  EdgeThickness -> Absolute[1], EdgeDashing :> None, EdgeCapForm :> "Square", 
+  EdgeJoinForm :> {"Miter", 3.25}, FrontFaceColor -> GrayLevel[0], 
+  FrontFaceOpacity -> 1, GraphicsColor -> Hue[0.67, 0.6, 0.6], Thickness -> 
+  Medium, Opacity -> 1, DrawFrontFaces -> True, FontFamily -> "Courier", 
+  FontSize -> 12, FontWeight -> "Plain", FontSlant -> "Plain", FontTracking -> 
+  "Plain", FontVariations -> {
    "CapsType" -> Normal, "CompatibilityType" -> Normal, "Masked" -> False, 
     "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
     "Underline" -> False}, 

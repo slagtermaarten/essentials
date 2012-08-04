@@ -1,1 +1,0 @@
-au FocusLost * :wa

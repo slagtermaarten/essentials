@@ -32,6 +32,10 @@ Bundle 'vim-scripts/Vicle'
 Bundle 'c.vim'
 Bundle 'Vim-R-plugin'
 
+if has('gui_running')
+    au FocusLost * silent! wa
+endif
+
 map j gj
 map k gk
 
@@ -48,7 +52,7 @@ autocmd BufRead *.txt setlocal smartindent
 au BufRead,BufNewFile,BufReadPost *.txt set thesaurus+=~/Dropbox/thesaurus/mthesaur.txt 
 
 command! Math w | !command cat "`pwd`/%" | math | grep -v "In\["
-au BufRead *.m so ~/.vim/after/ftplugin/m.vim
+au BufRead *.m so ~/.vim/after/ftplugin/mathematica.vim
 
 set pastetoggle=<F2>
 set hidden
@@ -185,5 +189,3 @@ let g:surround_{char2nr('_')} = "_{\r}"
 let g:surround_{char2nr('t')} = "\\text{\r}"
 let g:surround_{char2nr('i')} = "\\emph{\r}"
 let g:surround_{char2nr('b')} = "\\textbf{\r}"
-
-
