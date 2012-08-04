@@ -1,4 +1,3 @@
 *.pdf
-*~
 *.swp
 .vim/view/*
