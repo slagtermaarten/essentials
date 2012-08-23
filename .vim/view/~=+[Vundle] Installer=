@@ -5,18 +5,18 @@ nnoremap <buffer> C :BundleClean!
 nnoremap <buffer> D :exec 'Delete'.getline('.')
 nnoremap <buffer> I :exec 'InstallAndRequire'.substitute(getline('.'), '^Bundle ', 'Bundle! ', '')
 nnoremap <buffer> R :call vundle#scripts#reload()
-nnoremap <buffer> add! :exec 'Install'.substitute(getline('.'), '^Bundle ', 'Bundle! ', '')
 nnoremap <buffer> add :exec 'Install'.getline('.')
+nnoremap <buffer> add! :exec 'Install'.substitute(getline('.'), '^Bundle ', 'Bundle! ', '')
 nnoremap <buffer> c :BundleClean
 nnoremap <buffer> h :h vundle
 nnoremap <buffer> i :exec 'InstallAndRequire'.getline('.')
 nnoremap <buffer> l :VundleLog
 nnoremap <buffer> q :silent bd!
 nnoremap <buffer> s :BundleSearch 
+nnoremap <buffer> u :VundleChangelog
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
-setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -25,16 +25,11 @@ setlocal nocindent
 setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
 setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
 setlocal commentstring=/*%s*/
 setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
 setlocal completefunc=
 setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
 setlocal nocursorcolumn
 setlocal cursorline
 setlocal define=
@@ -60,8 +55,8 @@ setlocal formatexpr=
 setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
+setlocal iminsert=0
+setlocal imsearch=0
 setlocal include=
 setlocal includeexpr=
 setlocal indentexpr=
@@ -85,7 +80,6 @@ setlocal nopreserveindent
 setlocal previewwindow
 setlocal quoteescape=\\
 setlocal readonly
-setlocal norelativenumber
 setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
@@ -108,12 +102,11 @@ setlocal tabstop=4
 setlocal tags=
 setlocal textwidth=0
 setlocal thesaurus=
-setlocal noundofile
 setlocal winfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 24 - ((1 * winheight(0) + 11) / 23)
+let s:l = 24 - ((5 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
