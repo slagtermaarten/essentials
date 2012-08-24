@@ -1,3 +1,4 @@
 *.pdf
 *.swp
 .vim/view/*
+.ssh/id_rsa

@@ -8,3 +8,5 @@
 	excludesfile = /home/maarten/.gitignore
 [alias]
     ac = !git add -A && git commit
+[credential]
+	helper = cache

@@ -41,6 +41,9 @@ ln -s $HOME/essentials/.Mathematica
 rm .fonts
 ln -s $HOME/essentials/.fonts
 
+rm .ssh
+ln -s $HOME/essentials/.ssh .
+
 mkdir .matplotlib
 cd .matplotlib
 rm matplotlibrc
@@ -57,3 +60,4 @@ cd -
 echo "Complete"
 
 # getnonfreefonts-sys --all
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
