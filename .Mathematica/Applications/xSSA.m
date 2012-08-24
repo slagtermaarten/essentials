@@ -83,14 +83,12 @@ WriteCSV::usage="WriteCSV[stream, data, ...] writes a line of data in CSV form t
 
 Begin["`Private`"];
 
-
 MyFilterOptions[f_, opt___?OptionQ]:= 
 If[$VersionNumber<6,
 Utilities`FilterOptions`FilterOptions[f, opt]
 ,
 Sequence@@FilterRules[Flatten[{opt}],Options[f]]
 ];
-
 
 
 now::usage="now[] returns the date and time as a string";
@@ -110,8 +108,6 @@ WriteCSV[stream_, data__]:= Write[stream, ExportString[{data}, "csv"]];
 WriteTSV[stream_, data__]:= Write[stream, ExportString[{data}, "tsv"]];
 
 
-
-
 NewFileName[opt___?OptionQ]:= Module[{f,file, prefix, type, n},
 prefix = "FilePrefix"/.{opt}/.{"FilePrefix"-> "SSA-"}; 
 type = "FileType"/.{opt}/.{"FileType"-> "dat"}; 
@@ -129,7 +125,6 @@ If[Length[FileNames[f]]>0, Print["Warning: file ", f, " will be overwritten."]];
 Return[f]; 
 ]
 
-
 PositiveInteger[x_]:=And[IntegerQ[x],Positive[x]];
 NegativeInteger[x_]:=And[IntegerQ[x],Negative[x]];
 
@@ -142,7 +137,6 @@ Return[MapThread[UmbralPower,{x,powers}]];];
 UmbralPower[x_,n_?Positive]:=Gamma[x+1]/Gamma[x+1-n];
 
 UmbralPower[x_,n_]:=(Print["Error: UmbralPower undefined for power ",n," (must be a positive integer)."];$Failed);
-
 
 ListToSum[Rule[a_, b_]]:= Rule[ListToSum[a], ListToSum[b]]; 
 ListToSum[x_]:= Plus@@Flatten[{x/.{Plus->List}}];
@@ -241,7 +235,6 @@ rexp = Join@@rexp;
 Return[rexp]; 
 ];
 
-
 ExpandReaction[{A_-> B_, x___}]:={{A-> B , x}};
 
 
@@ -258,7 +251,6 @@ Print["Warning: Extra rate constants in the reaction ",{A\[RightArrowLeftArrow]B
 r={{A-> B, k[[1]]}, {B-> A, k[[2]]}}; 
 Return[r]; 
 ];
-
 
 
 ExpandReaction[{
@@ -278,7 +270,6 @@ Print["Warning: Extra rate constants in the reaction ",{
 ]; 
 r={{A+e-> B+e, k[[1]]}}; 
 Return[r]]; 
-
 
 
 ExpandReaction[{
@@ -933,13 +924,15 @@ Abort[];
 ]
 ];
 
+OrigRand:=RandomReal[{0,1}]
+OrigRand=0.2
 
 SSADotPlot[solution_,variables_?ListQ,opt___?OptionQ]:=Module[{styles,plots, plt,nvars},
 nvars=Length[variables];
 
 styles=SSAPlotStyles/.{opt}/.Options[SSAPlot];
 If[styles==Automatic,
-styles=Table[Hue[RandomReal[{0,1}]], {nvars}];
+styles=ColorData[nvars,"ColorList"];
 ];
 
 If[ListQ[styles],
@@ -969,7 +962,7 @@ nvars=Length[variables];
 
 styles=SSAPlotStyles/.{opt}/.Options[SSAPlot];
 If[styles==Automatic,
-styles=Table[Hue[RandomReal[{0,1}]], {nvars}];
+styles=ColorData[nvars,"ColorList"];
 ];
 
 If[ListQ[styles],
@@ -981,7 +974,6 @@ plots = MapThread[SSALinePlot[solution, #1, DisplayFunction-> Identity, PlotStyl
 plt=Show[plots, DisplayFunction-> (DisplayFunction/.{opt}/.{DisplayFunction-> $DisplayFunction})];
 Return[plt];
 ];
-
 
 SSALinePlot[solution_,variable_,opt___?OptionQ]:=Module[{plt,popt, data, xvals, yvals,moredata, dbg, dPrint, variables},
 dbg = "Debug"/.{opt}/.{"Debug"-> False};
@@ -1027,7 +1019,6 @@ SSAPhasePlot[s_, {X_, Y_}, directives_]:= SSAPhasePlot[s, {X,Y}, "Directives"-> 
 SSAPhasePlot[x___]:= (Print["Error: expecting SSAPhasePlot[solution, {X, Y}, GraphicsDirectives] or SSAPhasePlot[solution, {X,Y}, Options]"]; $Failed);
 SSAPhaseCurve[solution_, {X_, Y_}, directives___]:= SSAPhasePlot[solution, {X,Y}, "Directives"-> {directives}, Axes-> False]; 
 
-
 SSAPhaseCurveData[solution_, {X_, Y_}]:= Module[{x, y, vars, xy},
 x=X/.solution/.{X-> $Failed}; 
 y=Y/.solution/.{Y-> $Failed}; 
@@ -1041,7 +1032,6 @@ y=Last/@y;
 xy=Transpose[{x,y}]; 
 xy
 ]; 
-
 
 SSAPhaseArrayPlot[solutions_, {X_, Y_}, {{xmin_, xmax_}, {ymin_ , ymax_}}]:= Module[{pcdata, ixmax, iymax, i, x, y, map},
 ixmax = xmax-xmin + 1; 
@@ -1057,13 +1047,11 @@ map[[x, y]] = map[[x, y]] + 1
 Return[map]; 
  ]
 
-
 SSAFit[sim_]:= Module[{vars, funcs, fit},
 vars = First/@sim;
 funcs = Interpolation[#/.sim, InterpolationOrder-> 1]&/@vars;
 fit = MapThread[Rule, {vars, funcs}]
 ]
-
 
 SSAMean[sims_,opt___?OptionQ]:=Module[{vars,fits,domains,tstart,tend,dt,tvals,i,timespan,npoints,values,sums,t,vals,functionate,ffits,nvars,valsums,valsumsq,\[Mu],means,\[Sigma],sigmas,nsims,times,plus1sigma,plus2sigma,plus3sigma,minus1sigma,minus2sigma,minus3sigma,\[Sigma]p1,\[Sigma]p2,\[Sigma]p3,\[Sigma]m1,\[Sigma]m2,\[Sigma]m3,Interp,dPrint,dbg,Rates,rates,results},dbg="Debug"/.{opt}/.{"Debug"->False};
 Rates="Rates"/.{opt}/.{"Rates"->False};
@@ -1147,13 +1135,11 @@ AppendTo[meanrates,name->fit];];
 AppendTo[results,"MeanRates"->meanrates];]];
 Return[results];]
 
-
 PlotStats[var_,stats_,opt___?OptionQ]:=Module[{start,stop,top,bot,mean,t},top=var/.("MeanPlusSigma"/.stats);
 bot=var/.("MeanMinusSigma"/.stats);
 mean=var/.("Means"/.stats);
 {start,stop}=Flatten[InterpolatingFunctionDomain[var/.("Means"/.stats)]];
 Plot[{top[t],bot[t],mean[t]},{t,start,stop},Exclusions->None,Filling->{1->{2}},opt]]
-
 
 CelleratorMLLoaded=False; 
 SSASave[x___]:= SSASaveXML[x]; 
@@ -1198,7 +1184,6 @@ saved=CelleratorML`SaveModel[filename, x, Sequence@@opts];
 Return[saved];
 ];
 SSASaveXML[x___]:= (Print["Expecting SSASave[model]"]; $Failed);
-
 
 SSAGet[x___]:= SSAReadXML[x]; 
 SSAReadXML[file_?StringQ, opt___?OptionQ]:= Module[{load, m, r, ic, opts, name, save},

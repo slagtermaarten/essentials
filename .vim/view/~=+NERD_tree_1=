@@ -97,14 +97,14 @@ setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
 setlocal nowinfixheight
-setlocal nowinfixwidth
+setlocal winfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 8 - ((7 * winheight(0) + 11) / 23)
+let s:l = 18 - ((12 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
+18
 normal! 0
 lcd ~/Dropbox/rcpp
 let &so = s:so_save | let &siso = s:siso_save

@@ -39,7 +39,6 @@ endif
 map j gj
 map k gk
 
-let g:tex_flavor='latex'
 autocmd BufRead *.tex setlocal formatoptions=l
 autocmd BufRead *.tex setlocal lbr 
 autocmd BufRead *.tex setlocal smartindent 
@@ -68,7 +67,7 @@ let g:netrw_keepdir=0
 map f \
 nmap <silent> <c-n> : NERDTreeToggle<CR>
 map <leader>n :NERDTreeFind<cr>
-map <leader>fm :w<cr> :!make <cr>
+map <silent> <leader>m :w<cr> :! make <cr><cr>
 map <leader>es :! evince expand("%:r") & <cr>
 
 let vimrplugin_screenplugin = 0
@@ -154,38 +153,13 @@ autocmd FileType python let w:vicle_selection_string = "0v}y"
 autocmd FileType R let w:vicle_selection_string = "0v}y"
 " let g:tex_indent_items = 1
 
-nmap <leader>h :call RHead()<CR>
-" set visualbell t_vb=
-" let g:Tex_CompileRule_pdf = 'xelatex -interaction=nonstopmode $*'
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats = 'pdf'
-let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
-let g:Tex_UseMakefile = 0
-let g:Tex_ViewRule_pdf = 'evince'
-let g:Tex_Folding = 0
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
-
-" set paste
-
-fu! Showpdf() 
-    let a:current_file = expand("%:r")
-    ! evince current_file &
-endfunction
-
 " let g:current_file = expand("%:r")
-
-fu! Testfunc() 
-    current_file = expand("%:r")
-    echo a:current_file
-endfunction
 
 noremap <C-k> :bprev<CR> 
 noremap <C-l> :bnext<CR> 
-set guifont=Monospace\ 9
+set guifont=Monospace\ 8.5
+colors slate
 let g:ipy_completefunc = 'local'
 
-let g:surround_{char2nr('_')} = "_{\r}"
-let g:surround_{char2nr('t')} = "\\text{\r}"
-let g:surround_{char2nr('i')} = "\\emph{\r}"
-let g:surround_{char2nr('b')} = "\\textbf{\r}"
+let g:tex_flavor='latex'
+au BufRead *.tex so ~/.vim/after/ftplugin/tex.vim
