@@ -10,12 +10,19 @@
 \clubpenalty = 10000
 \widowpenalty = 10000
 % \usepackage{kpfonts}
-\usepackage{graphicx}
 \usepackage{verbatim}
-\usepackage{epstopdf}
 \usepackage[urw-garamond]{mathdesign}
 \usepackage[T1]{fontenc}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 \usepackage[]{natbib}
-% \usepackage{paralist}
+\usepackage{paralist}
+
+\ifx\pdfoutput\undefined
+% we are running LaTeX, not pdflatex
+\usepackage{graphicx}
+\else
+% we are running pdflatex, so convert .eps files to .pdf
+\usepackage[pdftex]{graphicx}
+\usepackage[update,prepend]{epstopdf}
+\fi

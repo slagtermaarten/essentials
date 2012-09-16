@@ -38,6 +38,7 @@ endif
 
 map j gj
 map k gk
+set pastetoggle=<F9>>
 
 autocmd BufRead *.tex setlocal formatoptions=l
 autocmd BufRead *.tex setlocal lbr 
@@ -53,7 +54,9 @@ au BufRead,BufNewFile,BufReadPost *.txt set thesaurus+=~/Dropbox/thesaurus/mthes
 command! Math w | !command cat "`pwd`/%" | math | grep -v "In\["
 au BufRead *.m so ~/.vim/after/ftplugin/mathematica.vim
 
+nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+set showmode
 set hidden
 set tabstop=4
 set expandtab
@@ -67,7 +70,6 @@ let g:netrw_keepdir=0
 map f \
 nmap <silent> <c-n> : NERDTreeToggle<CR>
 map <leader>n :NERDTreeFind<cr>
-map <silent> <leader>m :w<cr> :! make <cr><cr>
 map <leader>es :! evince expand("%:r") & <cr>
 
 let vimrplugin_screenplugin = 0
@@ -106,6 +108,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=4 expandtab
 au BufNewFile,BufReadPost *.html nmap <silent> <c-m> :! /opt/google/chrome/google-chrome % <Cr>
+au BufNewFile,BufReadPost *.tex set syntax=pytex
 
 au BufNewFile,BufReadPost *.html set autoindent expandtab textwidth=80
 " Haskell compiler on reading of Haskell buffer
@@ -153,8 +156,6 @@ autocmd FileType python let w:vicle_selection_string = "0v}y"
 autocmd FileType R let w:vicle_selection_string = "0v}y"
 " let g:tex_indent_items = 1
 
-" let g:current_file = expand("%:r")
-
 noremap <C-k> :bprev<CR> 
 noremap <C-l> :bnext<CR> 
 set guifont=Monospace\ 8.5
@@ -163,3 +164,27 @@ let g:ipy_completefunc = 'local'
 
 let g:tex_flavor='latex'
 au BufRead *.tex so ~/.vim/after/ftplugin/tex.vim
+
+fu! DoRunPyBuffer2() 
+    pclose! " force preview window closed"
+    setlocal ft=python
+
+    " copy the buffer into a new window, then run that buffer through python
+    sil %y a | below new | sil put a | sil %!python -
+    " " indicate the output window as the current previewwindow
+    " setlocal previewwindow ro nomodifiable nomodified
+    setlocal previewwindow
+    "
+    " " back into the original window
+    winc p
+endfu
+command! RunPyBuffer call DoRunPyBuffer2() 
+map <Leader>p :RunPyBuffer<CR>
+
+set previewheight=15
+au BufEnter ?* call PreviewHeightWorkAround()
+func! PreviewHeightWorkAround()
+    if &previewwindow
+        exec 'setlocal winheight='.&previewheight
+    endif
+endfunc

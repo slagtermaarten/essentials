@@ -2,6 +2,7 @@ set -o vi
 export CDPATH=~/Dropbox:~
 PATH=$HOME/essentials/bin:$PATH
 export PATH
+xmodmap ~/essentials/.Xmodmap
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
