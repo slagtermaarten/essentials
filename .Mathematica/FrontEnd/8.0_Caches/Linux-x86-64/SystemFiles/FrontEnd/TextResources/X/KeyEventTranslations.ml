@@ -1,6 +1,6 @@
 "100 A~95 /usr/local/Wolfram/Mathematica/8.0/SystemFiles/FrontEnd/TextResources/X/KeyEventTranslations.tr
 "GA~D4411
-"MA~J1342273866
+"MA~J1349707724
 FA#TA~QEventTranslations
 F119 #GA~DList
 FB#GA~DItem

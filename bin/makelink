@@ -50,6 +50,9 @@ rm matplotlibrc
 ln -s $HOME/essentials/.matplotlib/matplotlibrc .
 cd -
 
+rm -r $HOME/.config
+ln -s $HOME/essentials/.config . 
+
 cd $HOME/essentials/bin
 rm R
 rm Rscript

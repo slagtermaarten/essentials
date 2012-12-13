@@ -1,8 +1,11 @@
 set -o vi
-export CDPATH=~/Dropbox:~
+# export CDPATH=~/Dropbox:~
 PATH=$HOME/essentials/bin:$PATH
 export PATH
 xmodmap ~/essentials/.Xmodmap
+# export CLASSPATH=/opt/colt/lib/colt.jar:/opt/colt/lib/concurrent.jar:$CLASSPATH
+# LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+# export LD_LIBRARY_PATH
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -19,8 +22,8 @@ HISTCONTROL=ignoredups:ignorespace
 # shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100
+HISTFILESIZE=200
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -35,9 +38,9 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-# case "$TERM" in
-    # xterm-color) color_prompt=yes;;
-# esac
+case "$TERM" in
+    xterm-color) color_prompt=yes;;
+esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
@@ -108,3 +111,12 @@ alias mdump='alias|grep -e "alias g[0-9]"|grep -v "alias m" > ~/.bookmarks'
 alias lma='alias | grep -e "alias g[0-9]"|grep -v "alias m"|sed "s/alias //"'
 touch ~/.bookmarks
 source ~/.bookmarks
+
+# export PATH=$PATH:/opt/SBW-2.7.10/bin
+
+# export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/SBW-2.7.10/lib"
+
+# export SBW_HOME="/opt/SBW-2.7.10/"
+# export SBW_HOME=/opt/SBW-2.7.10
+# # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/SBW-2.7.10/lib/
+# export PATH=$PATH:/opt/SBW-2.7.10/bin/

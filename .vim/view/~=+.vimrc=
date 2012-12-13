@@ -1,5 +1,37 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+imap <buffer> <RightMouse> <Plug>delimitMateMRightMouse
+imap <buffer> <LeftMouse> <Plug>delimitMateMLeftMouse
+imap <buffer> <S-Up> <Plug>delimitMateS-Up
+imap <buffer> <S-Down> <Plug>delimitMateS-Down
+imap <buffer> <PageDown> <Plug>delimitMatePageDown
+imap <buffer> <PageUp> <Plug>delimitMatePageUp
+imap <buffer> <Down> <Plug>delimitMateDown
+imap <buffer> <Up> <Plug>delimitMateUp
+imap <buffer> <C-Right> <Plug>delimitMateC-Right
+imap <buffer> <C-Left> <Plug>delimitMateC-Left
+imap <buffer> <End> <Plug>delimitMateEnd
+imap <buffer> <Home> <Plug>delimitMateHome
+imap <buffer> <Right> <Plug>delimitMateRight
+imap <buffer> <Left> <Plug>delimitMateLeft
+imap <buffer> <Del> <Plug>delimitMateDel
+imap <buffer> <S-BS> <Plug>delimitMateS-BS
+imap <buffer> <BS> <Plug>delimitMateBS
+inoremap <buffer> <Plug>delimitMateJumpMany =len(b:_l_delimitMate_buffer) ? delimitMate#Finish(0) : delimitMate#JumpMany()
+imap <buffer> <C-ScrollWheelRight> <Plug>delimitMateC-ScrollWheelRight
+imap <buffer> <S-ScrollWheelRight> <Plug>delimitMateS-ScrollWheelRight
+imap <buffer> <ScrollWheelRight> <Plug>delimitMateScrollWheelRight
+imap <buffer> <C-ScrollWheelLeft> <Plug>delimitMateC-ScrollWheelLeft
+imap <buffer> <S-ScrollWheelLeft> <Plug>delimitMateS-ScrollWheelLeft
+imap <buffer> <ScrollWheelLeft> <Plug>delimitMateScrollWheelLeft
+imap <buffer> <C-ScrollWheelDown> <Plug>delimitMateC-ScrollWheelDown
+imap <buffer> <S-ScrollWheelDown> <Plug>delimitMateS-ScrollWheelDown
+imap <buffer> <ScrollWheelDown> <Plug>delimitMateScrollWheelDown
+imap <buffer> <C-ScrollWheelUp> <Plug>delimitMateC-ScrollWheelUp
+imap <buffer> <S-ScrollWheelUp> <Plug>delimitMateS-ScrollWheelUp
+imap <buffer> <ScrollWheelUp> <Plug>delimitMateScrollWheelUp
 vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
 nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
 vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "bW")
@@ -12,6 +44,10 @@ vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf*\%[un
 nnoremap <buffer> <silent> ][ m':call search('^\s*endf*\%[unction]\>', "W")
 vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
 nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
+imap <buffer> <silent> g <Plug>delimitMateJumpMany
+imap <buffer>  <Plug>delimitMateEsc
+let &cpo=s:cpo_save
+unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -113,13 +149,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 160 - ((7 * winheight(0) + 11) / 23)
+let s:l = 208 - ((1 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-160
-normal! 023l
-lcd ~/Dropbox/rcpp
+208
+normal! 021l
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

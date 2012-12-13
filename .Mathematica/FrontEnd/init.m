@@ -1,5 +1,10 @@
 SetOptions[$FrontEnd, 
-NotebookBrowseDirectory->"/home/maarten/Dropbox/igem_dropbox/mathematicafiles",
+NotebookBrowseDirectory->"/home/maarten/tsp",
+AutoOpenPalettes->{},
+ConversionOptions->{"ExportOptions"->{
+ "JPEG" -> {
+   "ColorSpace" -> Automatic, "CompressionLevel" -> 0, "Smoothing" -> 0, 
+    "Progressive" -> False}}},
 Current2DTool->"Select",
 Default2DTool->"Select",
 IsPersistent2DTool->False,
@@ -13,58 +18,74 @@ EvaluatorNames->{
   "galjas" -> {
    "RemoteMachine" -> True, "TranslateReturns" -> True, "AutoStartOnLaunch" -> 
     False, "HostName" -> "galjas.few.vu.nl", "RemoteLogin" -> "msr313"}},
-NotebooksMenu->{"readouput.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox"}, 
-     "readouput.nb", CharacterEncoding -> "UTF-8"], True, False, True}, 
-  "readoutput.nb" -> {
+NotebooksMenu->{"timeinferrance.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "iGEM", 
+      "models"}, "timeinferrance.nb", CharacterEncoding -> "UTF-8"], True, 
+    False, True}, "memory_generations_improved.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "iGEM", 
+      "models"}, "memory_generations_improved.nb", CharacterEncoding -> 
+     "UTF-8"], True, False, True}, "reducedmodel.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "iGEM", 
+      "background_activity"}, "reducedmodel.nb", CharacterEncoding -> 
+     "UTF-8"], True, False, True}, "progen.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "iGEM", 
+      "models"}, "progen.nb", CharacterEncoding -> "UTF-8"], True, False, 
+    True}, "reducedmodel.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten"}, "reducedmodel.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, "genes2c.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Downloads"}, 
+     "genes2c.nb", CharacterEncoding -> "UTF-8"], True, False, True}, 
+  "genes2c.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "igem_dropbox", "mathematicafiles"}, "readoutput.nb", CharacterEncoding -> 
-     "UTF-8"], True, False, True}, "mono-mono.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "igem_dropbox", "mathematicafiles"}, "mono-mono.nb", CharacterEncoding -> 
-     "UTF-8"], True, False, True}, "Repressilator-Deterministic.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "igem_dropbox", "mathematicafiles"}, "Repressilator-Deterministic.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, "lac_stochastic.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "igem_dropbox", "mathematicafiles"}, "lac_stochastic.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, 
-  "memory_generations.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "igem_dropbox", "mathematicafiles"}, "memory_generations.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, 
-  "memory_generations_improved_IPTG.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "igem_dropbox", "models"}, "memory_generations_improved_IPTG.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, 
-  "memory_generations_improved.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "igem_dropbox", "models"}, "memory_generations_improved.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}},
-PreferencesSettings->{"Page"->"Advanced"},
-FindSettings->{"FindBoxes"->"toSpecies",
+      "noteverywhere", "twocomp"}, "genes2c.nb", CharacterEncoding -> 
+     "UTF-8"], True, False, True}, "support.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "tsp"}, 
+     "support.nb", CharacterEncoding -> "UTF-8"], True, False, True}},
+PalettesMenuSettings->{
+ "BasicMathAssistant.nb" -> {
+   WindowMargins -> {{Automatic, 0}, {Automatic, 0}}, 
+    TaggingRules -> {
+     "ShowCalculator" -> False, "ShowBasicCommands" -> False, 
+      "ShowBasicTypesetting" -> False, "ShowHelpLinks" -> False, 
+      "PaletteMode" -> 1, "OptionsInsertionMode" -> 1}}},
+PreferencesSettings->{"Page"->"Evaluation"},
+FindSettings->{"FindBoxes"->RowBox[{"Diffusion", " ", "coefficient"}],
 "FindHistory":>{
  "adesc", "at", "bt", "a", "b", "legend", "directMethod", "Manipulate", 
-  "toSpecies"},
-"FindString"->"toSpecies",
-"ReplaceBoxes"->"bf",
-"ReplaceHistory":>{"abal", "aT", "bT", "af", "bf"},
+  "toSpecies", "parms", "Ni", "Iex", "IP", "R20", "R2O", "0", "A", "Export", 
+  "Do", 
+  RowBox[{"Diffusion", " ", "coefficient"}]},
+"FindString"->"Diffusion coefficient",
+"IgnoreCase"->True,
+"ReplaceBoxes"->"Ip",
+"ReplaceHistory":>{"abal", "aT", "bT", "af", "bf", "Ip"},
 "SearchType"->LiteralSearch,
 "WholeWord"->True,
-"WindowMargins"->{{Automatic, 239}, {167, Automatic}},
+"WindowMargins"->{{253, 564}, {170, 308}},
 "Wraparound"->True},
+GridCreationSettings->{"Columns"->3,
+"DiagonalFill"->False,
+"DiagonalFillText"->"1",
+"DrawColumnLines"->False,
+"DrawFrame"->False,
+"DrawRowLines"->False,
+"Fill"->False,
+"FillText"->"0",
+"Rows"->3,
+"Type"->"Matrix"},
+OptionInspectorSettings->{"Scope"->"Selection"},
 DebuggerSettings->{"ShowStack"->False,
 "StackWindowMargins"->{{Automatic, 3}, {-5, Automatic}},
 "StackWindowSize"->{574, 251},
 "ToolsWindowMargins"->{{Automatic, 84}, {Automatic, 35}}},
 MessageOptions->{"AllowDisablingWarnings"->True,
-"CompatibilityToolWarning"->True,
-"ConsoleMessageAction"->"PrintToConsole",
+"CompatibilityToolWarning"->False,
+"ConsoleMessageAction"->"PrintToNotebook",
 "ErrorAction"->{"Beep", "DialogBox"},
 "ExplainBeepHelp"->False,
 "IgnoreTagBoxDeletionWarning"->True,
 "InsufficientVersionWarning"->True,
-"KernelMessageAction"->"PrintToConsole",
+"KernelMessageAction"->{"Beep", "PrintToNotebook"},
 "MathMLPasteWarning"->True,
 "MaxMessageCount"->3,
 "MessageCountResetTime"->2.,
@@ -73,12 +94,12 @@ MessageOptions->{"AllowDisablingWarnings"->True,
 "WarningAction"->"Beep"},
 PrivateFrontEndOptions->{"DialogSettings"->{
  "WelcomeScreen" -> {
-   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 3, 
-    "CurrentSlideNumber" -> 3}, 
+   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 4, 
+    "CurrentSlideNumber" -> 4}, 
   "DrawingTools" -> {
-   WindowMargins -> {{Automatic, 7}, {Automatic, 0}}, "ToolsOpener" -> True, 
-    "OperationsOpener" -> True, "FillOpener" -> True, "StrokeOpener" -> False,
-     "ArrowsOpener" -> False, "TextOpener" -> False, "PointsOpener" -> False, 
+   WindowMargins -> {{Automatic, 86}, {Automatic, 0}}, "ToolsOpener" -> True, 
+    "OperationsOpener" -> True, "FillOpener" -> True, "StrokeOpener" -> True, 
+    "ArrowsOpener" -> False, "TextOpener" -> False, "PointsOpener" -> False, 
     "RectanglesOpener" -> False, "SettingsOpener" -> False, 
     "SwatchColors" -> {{
        GrayLevel[0.], 
@@ -199,15 +220,15 @@ PrivateFrontEndOptions->{"DialogSettings"->{
       "Numbers" -> "Formatting"}}, "Install" -> {"Type" -> ""}}},
 PrintAction->"PrintToNotebook",
 NewPrimitiveStyle->{
- TextAlignment -> Left, Dashing -> None, CapForm -> "Square", 
-  JoinForm -> {"Miter", 3.25}, LineColor -> Hue[0.9060679774997897, 0.6, 0.6],
-   LineOpacity -> 1, EdgeColor -> Hue[0.9060654612039368, 0.6, 0.6], 
-  EdgeOpacity -> 1., EdgeThickness -> Absolute[1], EdgeDashing :> None, 
-  EdgeCapForm :> "Square", EdgeJoinForm :> {"Miter", 3.25}, FrontFaceColor -> 
-  GrayLevel[1], BackFaceColor -> Hue[0.67, 0.6, 0.6], FrontFaceOpacity -> 1, 
-  BackFaceOpacity -> 1, GraphicsColor -> Hue[0.9060679774997897, 0.6, 0.6], 
-  Thickness -> Medium, Opacity -> 1, DrawEdges -> False, DrawFrontFaces -> 
-  True, FontFamily -> "Courier", FontSize -> 12, FontWeight -> "Plain", 
+ TextAlignment -> Center, TextJustification -> 0., Dashing -> None, CapForm -> 
+  "Square", JoinForm -> {"Miter", 3.25}, LineColor -> GrayLevel[0], 
+  LineOpacity -> 1, EdgeColor -> GrayLevel[0.], EdgeOpacity -> 1., 
+  EdgeDashing :> None, EdgeCapForm :> "Square", 
+  EdgeJoinForm :> {"Miter", 3.25}, FrontFaceColor -> GrayLevel[0], 
+  BackFaceColor -> GrayLevel[0], FrontFaceOpacity -> 1, BackFaceOpacity -> 1, 
+  GraphicsColor -> GrayLevel[0], PointSize -> Absolute[3], Opacity -> 1, 
+  DrawEdges -> False, DrawFrontFaces -> True, DrawBackFaces -> True, 
+  FontFamily -> "Myriad Apple", FontSize -> 14, FontWeight -> "Plain", 
   FontSlant -> "Plain", FontTracking -> "Plain", 
   FontVariations -> {
    "CapsType" -> Normal, "CompatibilityType" -> Normal, "Masked" -> False, 
@@ -218,6 +239,7 @@ NewPrimitiveStyle->{
   PrivateFontOptions -> {
    "FontPostScriptName" -> "Automatic", "FontType" -> "Bitmap", 
     "WindowsUseTrueTypeNames" -> True}, "FontEnvironment" -> False, 
-  Magnification -> 1., ExactMagnification -> 1., FontColor -> Automatic, 
-  FontOpacity -> Automatic, Background -> GrayLevel[1.]}
+  Magnification -> 1., ExactMagnification -> 1., FontColor -> GrayLevel[0], 
+  FontOpacity -> 1, Background -> GrayLevel[1.], 
+  RectangleBoxOptions -> {RoundingRadius -> 0.}, Thickness -> Medium}
 ]

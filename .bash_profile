@@ -10,3 +10,6 @@ EDITOR=vim
 export EDITOR
 
 source ~/venv/base/bin/activate
+export SBW_HOME=/opt/SBW-2.7.10
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/SBW-2.7.10/lib/
+export PATH=$PATH:/opt/SBW-2.7.10/bin/

@@ -139,7 +139,7 @@ font.serif          : Palatino, Bitstream Vera Serif, New Century Schoolbook, Ce
 #text.color          : black
 
 ### LaTeX customizations. See http://www.scipy.org/Wiki/Cookbook/Matplotlib/UsingTex
-text.usetex         : True  # use latex for all text handling. The following fonts
+text.usetex         : False  # use latex for all text handling. The following fonts
                               # are supported through the usual rc parameter settings:
                               # new century schoolbook, bookman, times, palatino,
                               # zapf chancery, charter, serif, sans-serif, helvetica,
