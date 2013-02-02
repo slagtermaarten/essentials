@@ -7,14 +7,14 @@ filetype plugin on
 filetype indent on
 
 Bundle 'gmarik/vundle'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/nerdtree'
+" Bundle 'ervandew/supertab'
+" Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'rosenfeld/conque-term'
-Bundle 'bundacia/ScreenPipe'
+" Bundle 'rosenfeld/conque-term'
+" Bundle 'bundacia/ScreenPipe'
 Bundle 'panozzaj/vim-autocorrect'
-Bundle 'craigemery/vim-autotag'
+" Bundle 'craigemery/vim-autotag'
 Bundle "ivanov/vim-ipython"
 "SNIPMATE
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -22,17 +22,17 @@ Bundle "tomtom/tlib_vim"
 Bundle "snipmate-snippets"
 Bundle "garbas/vim-snipmate"
 Bundle "Raimondi/delimitMate"
-Bundle "majutsushi/tagbar"
-Bundle "altercation/vim-colors-solarized"
+" Bundle "majutsushi/tagbar"
+" Bundle "altercation/vim-colors-solarized"
 "SNIPMATE
 
 "Vimscripts
 Bundle 'L9'
-Bundle 'FuzzyFinder'
+" Bundle 'FuzzyFinder'
 Bundle 'fugitive.vim'
 Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'tComment'
-Bundle 'vim-scripts/Vicle'
+" Bundle 'vim-scripts/Vicle'
 Bundle 'c.vim'
 Bundle 'Vim-R-plugin'
 
@@ -164,39 +164,6 @@ set background=light
 " let g:ipy_completefunc = 'local'
 let g:tex_flavor='latex'
 " au BufRead *.tex *.Rnw so ~/.vim/after/ftplugin/tex.vim
-
-fu! DoRunPyBuffer2() 
-    pclose! " force preview window closed"
-    setlocal ft=python
-
-    " copy the buffer into a new window, then run that buffer through python
-    sil %y a | below new | sil put a | sil %!python -
-    " " indicate the output window as the current previewwindow
-    " setlocal previewwindow ro nomodifiable nomodified
-    setlocal previewwindow
-    "
-    " " back into the original window
-    winc p
-endfu
-command! RunPyBuffer call DoRunPyBuffer2() 
-map <Leader>p :RunPyBuffer<CR>
-
-set previewheight=15
-au BufEnter ?* call PreviewHeightWorkAround()
-func! PreviewHeightWorkAround()
-    if &previewwindow
-        exec 'setlocal winheight='.&previewheight
-    endif
-endfunc
-
-function! g:ChmodOnWrite()
-  if v:cmdbang
-    silent !chmod u+w %
-  endif
-endfunction
-
-autocmd BufWrite * call g:ChmodOnWrite()
-
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_pdf = 'okular'
 let g:tex_fold_enabled=1

@@ -8,11 +8,11 @@ ConversionOptions->{"ExportOptions"->{
 Current2DTool->"Select",
 Default2DTool->"Select",
 IsPersistent2DTool->False,
-Current3DTool->"RotateView",
-Default3DTool->"RotateView",
+Current3DTool->"GetPixelValues",
+Default3DTool->"GetPixelValues",
 IsPersistent3DTool->False,
-PrivateFrontEndOptions->{"LicensesAgreed"->{"8."}},
-VersionsLaunched->{"8.0.4"},
+PrivateFrontEndOptions->{"LicensesAgreed"->{"8.", "9."}},
+VersionsLaunched->{"8.0.4", "9.0.0"},
 EvaluatorNames->{
  "Local" -> {"AutoStartOnLaunch" -> True}, 
   "galjas" -> {
@@ -94,8 +94,10 @@ MessageOptions->{"AllowDisablingWarnings"->True,
 "WarningAction"->"Beep"},
 PrivateFrontEndOptions->{"DialogSettings"->{
  "WelcomeScreen" -> {
-   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 4, 
-    "CurrentSlideNumber" -> 4}, 
+   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 1, 
+    "CurrentSlideNumber" -> 1, "WelcomeScreenNews" -> 
+    "/home/maarten/.Mathematica/Paclets/Repository/WelcomeScreenNews-8.22/\
+WelcomeScreenNews.nb"}, 
   "DrawingTools" -> {
    WindowMargins -> {{Automatic, 86}, {Automatic, 0}}, "ToolsOpener" -> True, 
     "OperationsOpener" -> True, "FillOpener" -> True, "StrokeOpener" -> True, 
