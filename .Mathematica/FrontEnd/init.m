@@ -1,5 +1,6 @@
 SetOptions[$FrontEnd, 
-NotebookBrowseDirectory->"/home/maarten/tsp",
+NotebookBrowseDirectory->"/home/maarten/Dropbox/noteverywhere/past_courses/\
+kaiC",
 AutoOpenPalettes->{},
 ConversionOptions->{"ExportOptions"->{
  "JPEG" -> {
@@ -18,29 +19,35 @@ EvaluatorNames->{
   "galjas" -> {
    "RemoteMachine" -> True, "TranslateReturns" -> True, "AutoStartOnLaunch" -> 
     False, "HostName" -> "galjas.few.vu.nl", "RemoteLogin" -> "msr313"}},
-NotebooksMenu->{"timeinferrance.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "iGEM", 
-      "models"}, "timeinferrance.nb", CharacterEncoding -> "UTF-8"], True, 
-    False, True}, "memory_generations_improved.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "iGEM", 
-      "models"}, "memory_generations_improved.nb", CharacterEncoding -> 
-     "UTF-8"], True, False, True}, "reducedmodel.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "iGEM", 
-      "background_activity"}, "reducedmodel.nb", CharacterEncoding -> 
-     "UTF-8"], True, False, True}, "progen.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "iGEM", 
-      "models"}, "progen.nb", CharacterEncoding -> "UTF-8"], True, False, 
-    True}, "reducedmodel.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten"}, "reducedmodel.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, "genes2c.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Downloads"}, 
-     "genes2c.nb", CharacterEncoding -> "UTF-8"], True, False, True}, 
-  "genes2c.nb" -> {
+NotebooksMenu->{"MWC_Hall.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "noteverywhere", "twocomp"}, "genes2c.nb", CharacterEncoding -> 
-     "UTF-8"], True, False, True}, "support.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "tsp"}, 
-     "support.nb", CharacterEncoding -> "UTF-8"], True, False, True}},
+      "noteverywhere", "pdf", "GPCR", "notebooks"}, "MWC_Hall.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, 
+  "20130129_convert_Hall_model_into_MWC.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "noteverywhere", "pdf", "GPCR", "notebooks"}, 
+     "20130129_convert_Hall_model_into_MWC.nb", CharacterEncoding -> "UTF-8"],
+     True, False, True}, "hall model ternary complex MWC.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "noteverywhere", "pdf", "GPCR", "notebooks"}, 
+     "hall model ternary complex MWC.nb", CharacterEncoding -> "UTF-8"], True,
+     False, True}, "MWC_deriv.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "noteverywhere", "pdf", "GPCR", "notebooks"}, "MWC_deriv.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, "finalderiv.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten"}, "finalderiv.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, 
+  "livecorrect2.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "noteverywhere", "past_courses", "kaiC"}, "livecorrect2.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, "revert3.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "noteverywhere", "past_courses", "kaiC"}, "revert3.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, 
+  "revised_kaic.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "noteverywhere", "past_courses", "kaiC"}, "revised_kaic.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}},
 PalettesMenuSettings->{
  "BasicMathAssistant.nb" -> {
    WindowMargins -> {{Automatic, 0}, {Automatic, 0}}, 
@@ -49,13 +56,13 @@ PalettesMenuSettings->{
       "ShowBasicTypesetting" -> False, "ShowHelpLinks" -> False, 
       "PaletteMode" -> 1, "OptionsInsertionMode" -> 1}}},
 PreferencesSettings->{"Page"->"Evaluation"},
-FindSettings->{"FindBoxes"->RowBox[{"Diffusion", " ", "coefficient"}],
+FindSettings->{"FindBoxes"->"facps",
 "FindHistory":>{
  "adesc", "at", "bt", "a", "b", "legend", "directMethod", "Manipulate", 
   "toSpecies", "parms", "Ni", "Iex", "IP", "R20", "R2O", "0", "A", "Export", 
   "Do", 
-  RowBox[{"Diffusion", " ", "coefficient"}]},
-"FindString"->"Diffusion coefficient",
+  RowBox[{"Diffusion", " ", "coefficient"}], "facps"},
+"FindString"->"facps",
 "IgnoreCase"->True,
 "ReplaceBoxes"->"Ip",
 "ReplaceHistory":>{"abal", "aT", "bT", "af", "bf", "Ip"},
@@ -91,18 +98,19 @@ MessageOptions->{"AllowDisablingWarnings"->True,
 "MessageCountResetTime"->2.,
 "TeXPasteWarning"->True,
 "TraditionalFormEvaluationWarning"->True,
+"UseVersionedStylesheetWarning"->True,
 "WarningAction"->"Beep"},
 PrivateFrontEndOptions->{"DialogSettings"->{
  "WelcomeScreen" -> {
-   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 1, 
-    "CurrentSlideNumber" -> 1, "WelcomeScreenNews" -> 
-    "/home/maarten/.Mathematica/Paclets/Repository/WelcomeScreenNews-8.22/\
+   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 2, 
+    "CurrentSlideNumber" -> 2, "WelcomeScreenNews" -> 
+    "/home/maarten/.Mathematica/Paclets/Repository/WelcomeScreenNews-8.23.1/\
 WelcomeScreenNews.nb"}, 
   "DrawingTools" -> {
-   WindowMargins -> {{Automatic, 86}, {Automatic, 0}}, "ToolsOpener" -> True, 
-    "OperationsOpener" -> True, "FillOpener" -> True, "StrokeOpener" -> True, 
-    "ArrowsOpener" -> False, "TextOpener" -> False, "PointsOpener" -> False, 
-    "RectanglesOpener" -> False, "SettingsOpener" -> False, 
+   WindowMargins -> {{Automatic, -210}, {Automatic, 41}}, "ToolsOpener" -> 
+    True, "OperationsOpener" -> True, "FillOpener" -> True, "StrokeOpener" -> 
+    True, "ArrowsOpener" -> False, "TextOpener" -> False, "PointsOpener" -> 
+    False, "RectanglesOpener" -> False, "SettingsOpener" -> False, 
     "SwatchColors" -> {{
        GrayLevel[0.], 
        GrayLevel[0.09090909090909091], 
@@ -219,7 +227,8 @@ WelcomeScreenNews.nb"},
   "Preferences" -> {
    "SubTabs" -> {
      "Appearance" -> "SyntaxColoring", "SyntaxColoring" -> "LocalVariables", 
-      "Numbers" -> "Formatting"}}, "Install" -> {"Type" -> ""}}},
+      "Numbers" -> "Formatting"}}, "Install" -> {"Type" -> ""}},
+"InterfaceSettings"->{"PredictiveInterface" -> {"FirstUse" -> False}}},
 PrintAction->"PrintToNotebook",
 NewPrimitiveStyle->{
  TextAlignment -> Center, TextJustification -> 0., Dashing -> None, CapForm -> 
