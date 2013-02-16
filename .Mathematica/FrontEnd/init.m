@@ -19,11 +19,7 @@ EvaluatorNames->{
   "galjas" -> {
    "RemoteMachine" -> True, "TranslateReturns" -> True, "AutoStartOnLaunch" -> 
     False, "HostName" -> "galjas.few.vu.nl", "RemoteLogin" -> "msr313"}},
-NotebooksMenu->{"MWC_Hall.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "noteverywhere", "pdf", "GPCR", "notebooks"}, "MWC_Hall.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, 
-  "20130129_convert_Hall_model_into_MWC.nb" -> {
+NotebooksMenu->{"20130129_convert_Hall_model_into_MWC.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
       "noteverywhere", "pdf", "GPCR", "notebooks"}, 
      "20130129_convert_Hall_model_into_MWC.nb", CharacterEncoding -> "UTF-8"],
@@ -43,6 +39,9 @@ NotebooksMenu->{"MWC_Hall.nb" -> {
      CharacterEncoding -> "UTF-8"], True, False, True}, "revert3.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
       "noteverywhere", "past_courses", "kaiC"}, "revert3.nb", 
+     CharacterEncoding -> "UTF-8"], True, False, True}, "livecorrect.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
+      "noteverywhere", "past_courses", "kaiC"}, "livecorrect.nb", 
      CharacterEncoding -> "UTF-8"], True, False, True}, 
   "revised_kaic.nb" -> {
     FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
@@ -102,8 +101,8 @@ MessageOptions->{"AllowDisablingWarnings"->True,
 "WarningAction"->"Beep"},
 PrivateFrontEndOptions->{"DialogSettings"->{
  "WelcomeScreen" -> {
-   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 2, 
-    "CurrentSlideNumber" -> 2, "WelcomeScreenNews" -> 
+   "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 1, 
+    "CurrentSlideNumber" -> 1, "WelcomeScreenNews" -> 
     "/home/maarten/.Mathematica/Paclets/Repository/WelcomeScreenNews-8.23.1/\
 WelcomeScreenNews.nb"}, 
   "DrawingTools" -> {
