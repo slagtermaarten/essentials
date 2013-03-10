@@ -1,2 +1,0 @@
-sudo insmod $HOME/acpi_call/acpi_call.ko && sudo $HOME/acpi_call/test_off.sh
-sudo $HOME/acpi_call/test_off.sh

@@ -1,3 +1,0 @@
-rm -f messages.txt
-R --no-save --no-restore -e "require(knitr); knit2pdf('$1.Rnw')"
-# evince $1.pdf &

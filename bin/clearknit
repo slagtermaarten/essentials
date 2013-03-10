@@ -1,3 +1,0 @@
-rm -rf cache/
-rm -rf figure/
-rm -f *.tex
