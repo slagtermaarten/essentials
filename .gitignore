@@ -4,3 +4,4 @@
 .ssh/id_rsa
 .vim/bundle/*
 .fonts/*
+.Mathematica
