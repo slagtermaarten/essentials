@@ -5,20 +5,11 @@ cd $HOME
 rm -r texmf
 ln -s ~/essentials/texmf .
 
-rm .bashrc
-ln -s $HOME/essentials/.bashrc .
-
-rm .bash_aliases
-ln -s $HOME/essentials/.bash_aliases .
-
-rm .bash_profile
-ln -s $HOME/essentials/.bash_profile .
-
 rm .Xmodmap
 ln -s $HOME/essentials/.Xmodmap .
 
-rm .screenrc
-ln -s $HOME/essentials/.screenrc .
+rm .tmux.conf
+ln -s $HOME/essentials/.tmux.conf .
 
 rm .vim
 ln -s $HOME/essentials/.vim .
