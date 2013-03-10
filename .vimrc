@@ -16,14 +16,14 @@ Bundle "garbas/vim-snipmate"
 Bundle "Raimondi/delimitMate"
 Bundle "altercation/vim-colors-solarized.git"
 Bundle 'L9'
-Bundle 'fugitive.vim'
+" Bundle 'fugitive.vim' A tad hazardous in the hands of a novice git user like me
 Bundle 'LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'tComment'
 Bundle 'c.vim'
 Bundle 'Vim-R-plugin'
 
-autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif 
-autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+" autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif 
+" autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 au BufNewFile,BufReadPost *.html nmap <silent> <c-m> :! /opt/google/chrome/google-chrome % <Cr>
 au BufNewFile,BufReadPost *.tex set syntax=tex
 au Bufenter,BufNewFile,BufReadPost *.hs compiler ghc
@@ -33,7 +33,6 @@ set backspace=indent,eol,start
 set pastetoggle=<F2>
 set showmode
 set hidden
-set pastetoggle=<F9>
 set laststatus=2
 set tabstop=4
 set expandtab
@@ -59,21 +58,29 @@ set paste
 set wrap
 set linebreak
 set textwidth=80
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %=%-14.(%l,%c%V%)\ %P
+set foldmethod=manual
+set formatoptions+="tpcqa"
 syntax sync minlines=10
 syntax enable
 
+colorscheme solarized
+" let g:solarized_contrast="high"    "default value is normal
+set background=dark
+
 if has('gui_running')
-    colorscheme solarized
-    set background=dark
-    set guifont=Inconsolata\ 10
+    let g:solarized_contrast="high"    "default value is normal
+    " set guifont=Inconsolata\ 10
+    "
+    set lines=40 columns=82
 endif
 
 nnoremap <F2> :set invpaste paste?<CR>
 nnoremap ; :
 map j gj
 map k gk
-map f \
+" map f \
 map <silent> <leader>w :wa <cr>:! make all<cr>
 map <leader>c <c-_><c-_>
 nmap <leader>cs <c-_><c-_> gUU

@@ -3,3 +3,4 @@
 .vim/view/*
 .ssh/id_rsa
 .vim/bundle/*
+.fonts/*

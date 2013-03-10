@@ -1,6 +1,5 @@
 SetOptions[$FrontEnd, 
-NotebookBrowseDirectory->"/home/maarten/Dropbox/noteverywhere/past_courses/\
-kaiC",
+NotebookBrowseDirectory->"/home/maarten/Dropbox/GPCR/notebooks",
 AutoOpenPalettes->{},
 ConversionOptions->{"ExportOptions"->{
  "JPEG" -> {
@@ -19,55 +18,52 @@ EvaluatorNames->{
   "galjas" -> {
    "RemoteMachine" -> True, "TranslateReturns" -> True, "AutoStartOnLaunch" -> 
     False, "HostName" -> "galjas.few.vu.nl", "RemoteLogin" -> "msr313"}},
-NotebooksMenu->{"20130129_convert_Hall_model_into_MWC.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "noteverywhere", "pdf", "GPCR", "notebooks"}, 
-     "20130129_convert_Hall_model_into_MWC.nb", CharacterEncoding -> "UTF-8"],
-     True, False, True}, "hall model ternary complex MWC.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "noteverywhere", "pdf", "GPCR", "notebooks"}, 
-     "hall model ternary complex MWC.nb", CharacterEncoding -> "UTF-8"], True,
-     False, True}, "MWC_deriv.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "noteverywhere", "pdf", "GPCR", "notebooks"}, "MWC_deriv.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, "finalderiv.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten"}, "finalderiv.nb", 
+NotebooksMenu->{"QF_Intro_to_Mathematica.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten"}, 
+     "QF_Intro_to_Mathematica.nb", CharacterEncoding -> "UTF-8"], True, False,
+     True}, "mono-mono.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "iGEM", 
+      "models"}, "mono-mono.nb", CharacterEncoding -> "UTF-8"], True, False, 
+    True}, "SSA.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten"}, "SSA.nb", 
      CharacterEncoding -> "UTF-8"], True, False, True}, 
-  "livecorrect2.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "noteverywhere", "past_courses", "kaiC"}, "livecorrect2.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, "revert3.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "noteverywhere", "past_courses", "kaiC"}, "revert3.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, "livecorrect.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "noteverywhere", "past_courses", "kaiC"}, "livecorrect.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}, 
-  "revised_kaic.nb" -> {
-    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", 
-      "noteverywhere", "past_courses", "kaiC"}, "revised_kaic.nb", 
-     CharacterEncoding -> "UTF-8"], True, False, True}},
+  "InceptionMWC.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "GPCR", 
+      "notebooks"}, "InceptionMWC.nb", CharacterEncoding -> "UTF-8"], True, 
+    False, True}, "MWC_deriv.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "GPCR", 
+      "notebooks"}, "MWC_deriv.nb", CharacterEncoding -> "UTF-8"], True, 
+    False, True}, "revised_kaic2.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "kaiC"}, 
+     "revised_kaic2.nb", CharacterEncoding -> "UTF-8"], True, False, True}, 
+  "intracellular.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Dropbox", "GPCR", 
+      "notebooks"}, "intracellular.nb", CharacterEncoding -> "UTF-8"], True, 
+    False, True}, "intracellular.nb" -> {
+    FrontEnd`FileName[{$RootDirectory, "home", "maarten", "Downloads"}, 
+     "intracellular.nb", CharacterEncoding -> "UTF-8"], True, False, True}},
 PalettesMenuSettings->{
  "BasicMathAssistant.nb" -> {
    WindowMargins -> {{Automatic, 0}, {Automatic, 0}}, 
     TaggingRules -> {
      "ShowCalculator" -> False, "ShowBasicCommands" -> False, 
       "ShowBasicTypesetting" -> False, "ShowHelpLinks" -> False, 
-      "PaletteMode" -> 1, "OptionsInsertionMode" -> 1}}},
-PreferencesSettings->{"Page"->"Evaluation"},
-FindSettings->{"FindBoxes"->"facps",
+      "PaletteMode" -> 1, "OptionsInsertionMode" -> 1}}, 
+  "ColorSchemes.nb" -> {WindowMargins -> {{Automatic, 128}, {Automatic, 58}}}},
+PreferencesSettings->{"Page"->"Messages"},
+FindSettings->{"FindBoxes"->"NS",
 "FindHistory":>{
  "adesc", "at", "bt", "a", "b", "legend", "directMethod", "Manipulate", 
   "toSpecies", "parms", "Ni", "Iex", "IP", "R20", "R2O", "0", "A", "Export", 
   "Do", 
-  RowBox[{"Diffusion", " ", "coefficient"}], "facps"},
-"FindString"->"facps",
+  RowBox[{"Diffusion", " ", "coefficient"}], "facps", "NS"},
+"FindString"->"NS",
 "IgnoreCase"->True,
-"ReplaceBoxes"->"Ip",
-"ReplaceHistory":>{"abal", "aT", "bT", "af", "bf", "Ip"},
+"ReplaceBoxes"->"nG",
+"ReplaceHistory":>{"abal", "aT", "bT", "af", "bf", "Ip", "nG"},
 "SearchType"->LiteralSearch,
 "WholeWord"->True,
-"WindowMargins"->{{253, 564}, {170, 308}},
+"WindowMargins"->{{354, Automatic}, {144, Automatic}},
 "Wraparound"->True},
 GridCreationSettings->{"Columns"->3,
 "DiagonalFill"->False,
@@ -80,10 +76,15 @@ GridCreationSettings->{"Columns"->3,
 "Rows"->3,
 "Type"->"Matrix"},
 OptionInspectorSettings->{"Scope"->"Selection"},
-DebuggerSettings->{"ShowStack"->False,
-"StackWindowMargins"->{{Automatic, 3}, {-5, Automatic}},
+DebuggerSettings->{"BreakOnAllMessages"->True,
+"BreakpointsWindowMargins"->{{Automatic, 519}, {Automatic, 80}},
+"BreakpointsWindowSize"->{400, 418},
+"MessageBreakpointsGroup"->False,
+"ShowBreakpoints"->True,
+"ShowStack"->True,
+"StackWindowMargins"->{{Automatic, 413}, {192, Automatic}},
 "StackWindowSize"->{574, 251},
-"ToolsWindowMargins"->{{Automatic, 84}, {Automatic, 35}}},
+"ToolsWindowMargins"->{{749, Automatic}, {Automatic, 134}}},
 MessageOptions->{"AllowDisablingWarnings"->True,
 "CompatibilityToolWarning"->False,
 "ConsoleMessageAction"->"PrintToNotebook",
@@ -91,7 +92,7 @@ MessageOptions->{"AllowDisablingWarnings"->True,
 "ExplainBeepHelp"->False,
 "IgnoreTagBoxDeletionWarning"->True,
 "InsufficientVersionWarning"->True,
-"KernelMessageAction"->{"Beep", "PrintToNotebook"},
+"KernelMessageAction"->"PrintToConsole",
 "MathMLPasteWarning"->True,
 "MaxMessageCount"->3,
 "MessageCountResetTime"->2.,
@@ -103,7 +104,7 @@ PrivateFrontEndOptions->{"DialogSettings"->{
  "WelcomeScreen" -> {
    "ShowRecentFilesContextMenu" -> False, "DefaultSlideNumber" -> 1, 
     "CurrentSlideNumber" -> 1, "WelcomeScreenNews" -> 
-    "/home/maarten/.Mathematica/Paclets/Repository/WelcomeScreenNews-8.23.1/\
+    "/home/maarten/.Mathematica/Paclets/Repository/WelcomeScreenNews-8.25/\
 WelcomeScreenNews.nb"}, 
   "DrawingTools" -> {
    WindowMargins -> {{Automatic, -210}, {Automatic, 41}}, "ToolsOpener" -> 
@@ -227,20 +228,24 @@ WelcomeScreenNews.nb"},
    "SubTabs" -> {
      "Appearance" -> "SyntaxColoring", "SyntaxColoring" -> "LocalVariables", 
       "Numbers" -> "Formatting"}}, "Install" -> {"Type" -> ""}},
-"InterfaceSettings"->{"PredictiveInterface" -> {"FirstUse" -> False}}},
+"InterfaceSettings"->{"PredictiveInterface" -> {"FirstUse" -> False}},
+"WolframAlphaSettings"->{
+ "BaseURL" -> "Automatic", "Reinterpret" -> True, "Interactive" -> True, 
+  "Language" -> Automatic, "SendMathematicaSessionInfo" -> Automatic, "AppID" -> 
+  Automatic, "Recalculate" -> True}},
 PrintAction->"PrintToNotebook",
 NewPrimitiveStyle->{
  TextAlignment -> Center, TextJustification -> 0., Dashing -> None, CapForm -> 
-  "Square", JoinForm -> {"Miter", 3.25}, LineColor -> GrayLevel[0], 
-  LineOpacity -> 1, EdgeColor -> GrayLevel[0.], EdgeOpacity -> 1., 
-  EdgeDashing :> None, EdgeCapForm :> "Square", 
-  EdgeJoinForm :> {"Miter", 3.25}, FrontFaceColor -> GrayLevel[0], 
-  BackFaceColor -> GrayLevel[0], FrontFaceOpacity -> 1, BackFaceOpacity -> 1, 
-  GraphicsColor -> GrayLevel[0], PointSize -> Absolute[3], Opacity -> 1, 
-  DrawEdges -> False, DrawFrontFaces -> True, DrawBackFaces -> True, 
-  FontFamily -> "Myriad Apple", FontSize -> 14, FontWeight -> "Plain", 
-  FontSlant -> "Plain", FontTracking -> "Plain", 
-  FontVariations -> {
+  "Square", JoinForm -> {"Miter", 3.25}, LineColor -> Hue[0.67, 0.6, 0.6], 
+  LineOpacity -> 1, EdgeColor -> Hue[0.6699931334401464, 0.6, 0.6], 
+  EdgeOpacity -> 1., EdgeThickness -> Absolute[2], EdgeDashing :> None, 
+  EdgeCapForm :> "Square", EdgeJoinForm :> {"Miter", 3.25}, FrontFaceColor -> 
+  GrayLevel[0], BackFaceColor -> GrayLevel[0], FrontFaceOpacity -> 1, 
+  BackFaceOpacity -> 1, GraphicsColor -> GrayLevel[0], PointSize -> 
+  Absolute[3], Thickness -> Large, Opacity -> 1, DrawEdges -> False, 
+  DrawFrontFaces -> True, DrawBackFaces -> True, FontFamily -> "Times", 
+  FontSize -> 10, FontWeight -> "Plain", FontSlant -> "Italic", FontTracking -> 
+  "Plain", FontVariations -> {
    "CapsType" -> Normal, "CompatibilityType" -> Normal, "Masked" -> False, 
     "Outline" -> False, "Shadow" -> False, "StrikeThrough" -> False, 
     "Underline" -> False}, 
@@ -251,5 +256,5 @@ NewPrimitiveStyle->{
     "WindowsUseTrueTypeNames" -> True}, "FontEnvironment" -> False, 
   Magnification -> 1., ExactMagnification -> 1., FontColor -> GrayLevel[0], 
   FontOpacity -> 1, Background -> GrayLevel[1.], 
-  RectangleBoxOptions -> {RoundingRadius -> 0.}, Thickness -> Medium}
+  RectangleBoxOptions -> {RoundingRadius -> 0.}}
 ]

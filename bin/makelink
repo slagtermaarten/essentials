@@ -44,6 +44,12 @@ ln -s $HOME/essentials/.fonts
 rm .ssh
 ln -s $HOME/essentials/.ssh .
 
+rm .zshrc
+ln -s $HOME/essentials/.zshrc .
+
+rm -r .oh-my-zsh
+ln -s $HOME/essentials/.oh-my-zsh .
+
 mkdir .matplotlib
 cd .matplotlib
 rm matplotlibrc
@@ -63,4 +69,4 @@ cd -
 echo "Complete"
 
 # getnonfreefonts-sys --all
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+# git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle

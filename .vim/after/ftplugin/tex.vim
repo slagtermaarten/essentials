@@ -19,5 +19,5 @@ let g:surround_{char2nr('i')} = "\\emph{\r}"
 let g:surround_{char2nr('b')} = "\\textbf{\r}"
 let g:surround_{char2nr('v')} = "\\verbatim{\r}"
 let g:surround_{char2nr('o')} = "\\overline{\r}"
-syn on
+let g:surround_{char2nr('s')} = "\\sub{\r}"
 let g:tex_fold_enabled=1
